@@ -26,7 +26,7 @@ struct BikeBuild: Identifiable, Codable, Hashable {
     }
 }
 
-struct Bike: Identifiable, Codable {
+struct Bike: Identifiable, Codable, Hashable {
     let id: String
     let brand: String
     let model: String
