@@ -2,7 +2,7 @@
 
 **Biked** is a premium iOS application designed for cyclists who want to find their perfect bike match. It allows users to search through a curated database of premium 2024/2025 road bikes, compare geometries, and get size recommendations based on their body measurements.
 
-![App Header](Biked/Resources/BikeImages/b1.png)
+
 
 ## ✨ Features
 
