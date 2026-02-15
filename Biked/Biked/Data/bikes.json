@@ -5,8 +5,16 @@
         "model": "S-Works Tarmac SL8",
         "year": 2025,
         "category": "All-Rounder",
-        "description": "La bicicleta de competición más rápida del mundo.",
+        "description": "La bicicleta de competici\u00f3n m\u00e1s r\u00e1pida del mundo.",
+        "official_url": "https://www.specialized.com/us/en/s-works-tarmac-sl8-shimano-dura-ace-di2/p/216956",
         "geometry": [
+            {
+                "size": "44",
+                "stack_mm": 491,
+                "reach_mm": 369,
+                "top_tube_mm": 496,
+                "seat_tube_mm": 398
+            },
             {
                 "size": "49",
                 "stack_mm": 514,
@@ -41,6 +49,13 @@
                 "reach_mm": 405,
                 "top_tube_mm": 577,
                 "seat_tube_mm": 517
+            },
+            {
+                "size": "61",
+                "stack_mm": 612,
+                "reach_mm": 411,
+                "top_tube_mm": 595,
+                "seat_tube_mm": 547
             }
         ],
         "builds": [
@@ -50,9 +65,8 @@
                 "color": "Satin Carbon/Viavi Cyn Cyan",
                 "price_eur": 14000,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/3/3e/Remco_Evenepoel_LBL_2022.jpg",
-                    "https://assets.specialized.com/i/specialized/94924-00_TARMAC-SL8-SW-DURA-ACE-DI2-SATIN-CARBON-VIAVI-CYN-CYAN-VIAVI-SILVER-MAGENTA-HLZ-GRN-WHT-IMP_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto",
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e3/Quickstep_specialized_2007.jpg"
+                    "b1.png",
+                    "https://images.unsplash.com/photo-1507035895480-2b3156c311a6?auto=format&fit=crop&w=800&q=80"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace R9270 Di2",
@@ -65,26 +79,6 @@
                     "56": 0,
                     "58": 1
                 }
-            },
-            {
-                "id": "b1-v2",
-                "name": "SRAM Red AXS",
-                "color": "Gloss Red / White",
-                "price_eur": 14200,
-                "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/3/3e/Remco_Evenepoel_LBL_2022.jpg",
-                    "https://assets.specialized.com/i/specialized/94924-00_TARMAC-SL8-SW-DURA-ACE-DI2-SATIN-CARBON-VIAVI-CYN-CYAN-VIAVI-SILVER-MAGENTA-HLZ-GRN-WHT-IMP_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto",
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e3/Quickstep_specialized_2007.jpg"
-                ],
-                "specs": {
-                    "groupset": "SRAM Red eTap AXS",
-                    "wheelset": "Roval Rapide CLX II",
-                    "power_meter": "Quarq DZero"
-                },
-                "inventory": {
-                    "54": 1,
-                    "56": 3
-                }
             }
         ]
     },
@@ -94,8 +88,23 @@
         "model": "Aeroad CFR",
         "year": 2024,
         "category": "Aero",
-        "description": "Ingeniería alemana enfocada puramente en la velocidad.",
+        "description": "Ingenier\u00eda alemana enfocada puramente en la velocidad.",
+        "official_url": "https://www.canyon.com/en-es/bicicletas-de-carretera/bicicletas-aero/aeroad/cfr/",
         "geometry": [
+            {
+                "size": "2XS",
+                "stack_mm": 493,
+                "reach_mm": 362,
+                "top_tube_mm": 505,
+                "seat_tube_mm": 425
+            },
+            {
+                "size": "XS",
+                "stack_mm": 514,
+                "reach_mm": 376,
+                "top_tube_mm": 527,
+                "seat_tube_mm": 453
+            },
             {
                 "size": "S",
                 "stack_mm": 539,
@@ -123,6 +132,13 @@
                 "reach_mm": 422,
                 "top_tube_mm": 607,
                 "seat_tube_mm": 573
+            },
+            {
+                "size": "2XL",
+                "stack_mm": 630,
+                "reach_mm": 435,
+                "top_tube_mm": 634,
+                "seat_tube_mm": 603
             }
         ],
         "builds": [
@@ -132,9 +148,7 @@
                 "color": "Stealth",
                 "price_eur": 9499,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/8/87/Mathieu_van_der_Poel_Paris-Roubaix_2023.jpg",
-                    "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw0c0e0e98/images/full/full_2024_/2024_/full_2024_aeroad-cfr-di2_3967_R108_P03_01.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/0/02/TdF_2022_Castelnau-Magnoac_54_-_V%C3%A9los_Canyon.jpg"
+                    "b2.webp"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace Di2",
@@ -146,26 +160,6 @@
                     "M": 10,
                     "L": 2
                 }
-            },
-            {
-                "id": "b2-v2",
-                "name": "CFR MVDP Edition",
-                "color": "Alpecin Blue",
-                "price_eur": 9999,
-                "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/8/87/Mathieu_van_der_Poel_Paris-Roubaix_2023.jpg",
-                    "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw0c0e0e98/images/full/full_2024_/2024_/full_2024_aeroad-cfr-di2_3967_R108_P03_01.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/0/02/TdF_2022_Castelnau-Magnoac_54_-_V%C3%A9los_Canyon.jpg"
-                ],
-                "specs": {
-                    "groupset": "Shimano Dura-Ace Di2",
-                    "wheelset": "Shimano C60",
-                    "power_meter": "Shimano FC-R9200-P"
-                },
-                "inventory": {
-                    "M": 1,
-                    "L": 0
-                }
             }
         ]
     },
@@ -176,7 +170,22 @@
         "year": 2024,
         "category": "Aero",
         "description": "La bicicleta de carretera definitiva con tecnología IsoFlow.",
+        "official_url": "https://www.trekbikes.com/es/es_ES/bicicletas/bicicletas-de-carretera/bicicletas-de-carretera-de-rendimiento/madone/madone-slr/madone-slr-9-gen-7/p/37419/",
         "geometry": [
+            {
+                "size": "47",
+                "stack_mm": 504,
+                "reach_mm": 369,
+                "top_tube_mm": 512,
+                "seat_tube_mm": 420
+            },
+            {
+                "size": "50",
+                "stack_mm": 521,
+                "reach_mm": 378,
+                "top_tube_mm": 526,
+                "seat_tube_mm": 453
+            },
             {
                 "size": "52",
                 "stack_mm": 535,
@@ -204,6 +213,20 @@
                 "reach_mm": 396,
                 "top_tube_mm": 574,
                 "seat_tube_mm": 553
+            },
+            {
+                "size": "60",
+                "stack_mm": 601,
+                "reach_mm": 401,
+                "top_tube_mm": 588,
+                "seat_tube_mm": 573
+            },
+            {
+                "size": "62",
+                "stack_mm": 621,
+                "reach_mm": 406,
+                "top_tube_mm": 601,
+                "seat_tube_mm": 593
             }
         ],
         "builds": [
@@ -213,9 +236,7 @@
                 "color": "Lidl-Trek",
                 "price_eur": 12500,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/2/22/2024_AGR_start_Lidl-Trek_bike_Longo_Borghini.jpg",
-                    "https://media.trekbikes.com/image/upload/f_auto,fl_progressive,h_600,q_auto,w_1200/MadoneSLR9_24_42358_A_Portrait",
-                    "https://upload.wikimedia.org/wikipedia/commons/2/25/2024_AGR_start_Lidl-Trek_bikes.jpg"
+                    "b3.webp"
                 ],
                 "specs": {
                     "groupset": "SRAM Red eTap AXS",
@@ -236,7 +257,29 @@
         "year": 2025,
         "category": "All-Rounder",
         "description": "Siete de los últimos 11 Tour de Francia se han ganado en una Dogma.",
+        "official_url": "https://pinarello.com/global/en/bikes/road/competition/dogma-f",
         "geometry": [
+            {
+                "size": "430",
+                "stack_mm": 506,
+                "reach_mm": 365,
+                "top_tube_mm": 505,
+                "seat_tube_mm": 420
+            },
+            {
+                "size": "460",
+                "stack_mm": 516,
+                "reach_mm": 370,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 445
+            },
+            {
+                "size": "500",
+                "stack_mm": 525,
+                "reach_mm": 374,
+                "top_tube_mm": 525,
+                "seat_tube_mm": 470
+            },
             {
                 "size": "515",
                 "stack_mm": 535,
@@ -264,6 +307,27 @@
                 "reach_mm": 393,
                 "top_tube_mm": 557,
                 "seat_tube_mm": 525
+            },
+            {
+                "size": "560",
+                "stack_mm": 567,
+                "reach_mm": 397,
+                "top_tube_mm": 565,
+                "seat_tube_mm": 535
+            },
+            {
+                "size": "575",
+                "stack_mm": 583,
+                "reach_mm": 401,
+                "top_tube_mm": 575,
+                "seat_tube_mm": 550
+            },
+            {
+                "size": "595",
+                "stack_mm": 605,
+                "reach_mm": 405,
+                "top_tube_mm": 587,
+                "seat_tube_mm": 565
             }
         ],
         "builds": [
@@ -273,9 +337,7 @@
                 "color": "Nebula Green",
                 "price_eur": 14500,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Thomas_Pidcock_Amstel_Gold_Race_2024.jpg/1200px-Thomas_Pidcock_Amstel_Gold_Race_2024.jpg",
-                    "https://pinarello.com/global/en/images/bikes/dogma-f/dogma-f-luxter-red-gold-side.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/f/f2/Dogma_F10_Disk_and_the_F_is_for_FRESH%21%21_-dogmaf10_-pinarello_-roadbike_-baaw.jpg"
+                    "b4.png"
                 ],
                 "specs": {
                     "groupset": "Campagnolo Super Record Wireless",
@@ -296,7 +358,22 @@
         "year": 2024,
         "category": "Climbing",
         "description": "La construcción de carbono más ligera que Cannondale ha hecho jamás.",
+        "official_url": "https://www.cannondale.com/en-us/bikes/road/race/supersix-evo/supersix-evo-lab71",
         "geometry": [
+            {
+                "size": "44",
+                "stack_mm": 505,
+                "reach_mm": 366,
+                "top_tube_mm": 503,
+                "seat_tube_mm": 400
+            },
+            {
+                "size": "48",
+                "stack_mm": 520,
+                "reach_mm": 374,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 438
+            },
             {
                 "size": "51",
                 "stack_mm": 535,
@@ -317,6 +394,20 @@
                 "reach_mm": 392,
                 "top_tube_mm": 562,
                 "seat_tube_mm": 535
+            },
+            {
+                "size": "58",
+                "stack_mm": 595,
+                "reach_mm": 399,
+                "top_tube_mm": 578,
+                "seat_tube_mm": 558
+            },
+            {
+                "size": "61",
+                "stack_mm": 615,
+                "reach_mm": 407,
+                "top_tube_mm": 596,
+                "seat_tube_mm": 590
             }
         ],
         "builds": [
@@ -326,9 +417,7 @@
                 "color": "Burnt Pewter",
                 "price_eur": 13000,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/5/52/Neilson_Powless_Tour_de_France_2023.jpg",
-                    "https://embed.widencdn.net/img/dorelrl/mz1x3e4w5f/1700px/C23_C11153U_SuperSix_EVO_LAB71_Pewter_Side.png",
-                    "https://upload.wikimedia.org/wikipedia/commons/d/df/Cannondale-SM2000-.jpg"
+                    "b5.png"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace Di2",
@@ -349,7 +438,22 @@
         "year": 2024,
         "category": "Aero",
         "description": "La bici aero definitiva para sprints y escapadas.",
+        "official_url": "https://www.giant-bicycles.com/es/propel-advanced-sl-0-2024",
         "geometry": [
+            {
+                "size": "XS",
+                "stack_mm": 517,
+                "reach_mm": 372,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 465
+            },
+            {
+                "size": "S",
+                "stack_mm": 528,
+                "reach_mm": 378,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 500
+            },
             {
                 "size": "M",
                 "stack_mm": 545,
@@ -370,6 +474,13 @@
                 "reach_mm": 402,
                 "top_tube_mm": 580,
                 "seat_tube_mm": 575
+            },
+            {
+                "size": "XL",
+                "stack_mm": 601,
+                "reach_mm": 412,
+                "top_tube_mm": 605,
+                "seat_tube_mm": 595
             }
         ],
         "builds": [
@@ -379,9 +490,7 @@
                 "color": "Blue Dragonfly",
                 "price_eur": 11000,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/c/c9/Michael_Matthews_Tour_de_France_2022.jpg",
-                    "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80,w_850/my24/t-023_propel_advanced_sl_0_color_a_black_moonstone.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/2/28/Bicycle_crankset_Shimano_105_R7000_%28chainring_50-34%2C_length_172.5mm%2C_11_speed%29.jpg"
+                    "b6.webp"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace Di2",
@@ -397,12 +506,20 @@
     },
     {
         "id": "b7",
-        "brand": "Cervélo",
+        "brand": "Cerv\u00e9lo",
         "model": "S5",
         "year": 2024,
         "category": "Aero",
-        "description": "La bici que dominó el Tour con Vingegaard y Van Aert.",
+        "description": "La bici que domin\u00f3 el Tour con Vingegaard y Van Aert.",
+        "official_url": "https://www.cervelo.com/en-US/bikes/s5",
         "geometry": [
+            {
+                "size": "48",
+                "stack_mm": 497,
+                "reach_mm": 367,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 438
+            },
             {
                 "size": "51",
                 "stack_mm": 519,
@@ -423,6 +540,13 @@
                 "reach_mm": 392,
                 "top_tube_mm": 565,
                 "seat_tube_mm": 540
+            },
+            {
+                "size": "58",
+                "stack_mm": 588,
+                "reach_mm": 401,
+                "top_tube_mm": 581,
+                "seat_tube_mm": 560
             }
         ],
         "builds": [
@@ -432,9 +556,7 @@
                 "color": "Five Black",
                 "price_eur": 12000,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Jonas_Vingegaard_Tour_de_France_2023_Stage_17.jpg/1200px-Jonas_Vingegaard_Tour_de_France_2023_Stage_17.jpg",
-                    "https://images.ctfassets.net/p0qf7j048i0q/5S5x5x5x5x5x5x5x5/Cervelo_S5_2024_Hero.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e4/Cerv%C3%A9lo_S5_%282019%29_-_05.jpg"
+                    "b7.webp"
                 ],
                 "specs": {
                     "groupset": "SRAM Red eTap AXS",
@@ -445,26 +567,6 @@
                     "54": 3,
                     "56": 3
                 }
-            },
-            {
-                "id": "b7-v2",
-                "name": "Ultegra Di2",
-                "color": "Sapphire Ice",
-                "price_eur": 9000,
-                "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Jonas_Vingegaard_Tour_de_France_2023_Stage_17.jpg/1200px-Jonas_Vingegaard_Tour_de_France_2023_Stage_17.jpg",
-                    "https://images.ctfassets.net/p0qf7j048i0q/5S5x5x5x5x5x5x5x5/Cervelo_S5_2024_Hero.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cerv%C3%A9lo_S5_%282019%29_-_10.jpg"
-                ],
-                "specs": {
-                    "groupset": "Shimano Ultegra Di2",
-                    "wheelset": "Reserve 52|63",
-                    "power_meter": "4iiii"
-                },
-                "inventory": {
-                    "51": 2,
-                    "54": 6
-                }
             }
         ]
     },
@@ -474,8 +576,30 @@
         "model": "Orca Aero",
         "year": 2024,
         "category": "Aero",
-        "description": "Equilibrio perfecto entre aerodinámica, rigidez y peso.",
+        "description": "Equilibrio perfecto entre aerodin\u00e1mica, rigidez y peso.",
+        "official_url": "https://www.orbea.com/es-es/bicicletas/carretera/orca-aero/",
         "geometry": [
+            {
+                "size": "47",
+                "stack_mm": 506,
+                "reach_mm": 368,
+                "top_tube_mm": 510,
+                "seat_tube_mm": 440
+            },
+            {
+                "size": "49",
+                "stack_mm": 516,
+                "reach_mm": 374,
+                "top_tube_mm": 523,
+                "seat_tube_mm": 460
+            },
+            {
+                "size": "51",
+                "stack_mm": 528,
+                "reach_mm": 380,
+                "top_tube_mm": 536,
+                "seat_tube_mm": 480
+            },
             {
                 "size": "53",
                 "stack_mm": 539,
@@ -489,6 +613,20 @@
                 "reach_mm": 391,
                 "top_tube_mm": 560,
                 "seat_tube_mm": 510
+            },
+            {
+                "size": "57",
+                "stack_mm": 578,
+                "reach_mm": 398,
+                "top_tube_mm": 576,
+                "seat_tube_mm": 530
+            },
+            {
+                "size": "60",
+                "stack_mm": 601,
+                "reach_mm": 404,
+                "top_tube_mm": 592,
+                "seat_tube_mm": 560
             }
         ],
         "builds": [
@@ -498,9 +636,7 @@
                 "color": "MyO Custom",
                 "price_eur": 10500,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/1/18/Arnaud_De_Lie_Omloop_Het_Nieuwsblad_2024.jpg",
-                    "https://www.orbea.com/img/products/product/large/L105TTCC-NO-SIDE-ORBEA-ORCA-AERO-M10iLTD.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e1/Road_bike_Orbea_Orca_Aero_2020.jpg"
+                    "b8.png"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace Di2",
@@ -520,21 +656,57 @@
         "model": "Foil RC",
         "year": 2024,
         "category": "Aero",
-        "description": "Ganadora de etapas en Grandes Vueltas y Clásicas.",
+        "description": "Ganadora de etapas en Grandes Vueltas y Cl\u00e1sicas.",
+        "official_url": "https://www.scott-sports.com/es/es/product/scott-foil-rc-ultimate-bike",
         "geometry": [
             {
-                "size": "54",
+                "size": "XXS/47",
+                "stack_mm": 507,
+                "reach_mm": 372,
+                "top_tube_mm": 505,
+                "seat_tube_mm": 410
+            },
+            {
+                "size": "XS/49",
+                "stack_mm": 527,
+                "reach_mm": 378,
+                "top_tube_mm": 520,
+                "seat_tube_mm": 430
+            },
+            {
+                "size": "S/52",
+                "stack_mm": 527,
+                "reach_mm": 384,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 460
+            },
+            {
+                "size": "M/54",
                 "stack_mm": 548,
                 "reach_mm": 389,
                 "top_tube_mm": 550,
                 "seat_tube_mm": 480
             },
             {
-                "size": "56",
+                "size": "L/56",
                 "stack_mm": 568,
                 "reach_mm": 394,
                 "top_tube_mm": 570,
                 "seat_tube_mm": 500
+            },
+            {
+                "size": "XL/58",
+                "stack_mm": 589,
+                "reach_mm": 399,
+                "top_tube_mm": 590,
+                "seat_tube_mm": 520
+            },
+            {
+                "size": "XXL/61",
+                "stack_mm": 612,
+                "reach_mm": 409,
+                "top_tube_mm": 610,
+                "seat_tube_mm": 550
             }
         ],
         "builds": [
@@ -544,9 +716,7 @@
                 "color": "HMX SL Black",
                 "price_eur": 13999,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/d/d4/Romain_Bardet_Tour_de_France_2023.jpg",
-                    "https://www.scott-sports.com/_ui/responsive/common/images/products/2024/290333/290333_0098939_original.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Scott_Sports_logo.svg/2560px-Scott_Sports_logo.svg.png"
+                    "b9.webp"
                 ],
                 "specs": {
                     "groupset": "SRAM Red eTap AXS",
@@ -566,8 +736,23 @@
         "model": "Teammachine SLR01",
         "year": 2024,
         "category": "All-Rounder",
-        "description": "La primera bicicleta diseñada con inteligencia artificial (ACE Technology).",
+        "description": "La primera bicicleta dise\u00f1ada con inteligencia artificial (ACE Technology).",
+        "official_url": "https://www.bmc-switzerland.com/es/teammachine-slr01-one-23.html",
         "geometry": [
+            {
+                "size": "47",
+                "stack_mm": 506,
+                "reach_mm": 367,
+                "top_tube_mm": 517,
+                "seat_tube_mm": 423
+            },
+            {
+                "size": "51",
+                "stack_mm": 530,
+                "reach_mm": 377,
+                "top_tube_mm": 534,
+                "seat_tube_mm": 468
+            },
             {
                 "size": "54",
                 "stack_mm": 550,
@@ -581,6 +766,20 @@
                 "reach_mm": 392,
                 "top_tube_mm": 559,
                 "seat_tube_mm": 530
+            },
+            {
+                "size": "58",
+                "stack_mm": 584,
+                "reach_mm": 401,
+                "top_tube_mm": 575,
+                "seat_tube_mm": 553
+            },
+            {
+                "size": "61",
+                "stack_mm": 608,
+                "reach_mm": 408,
+                "top_tube_mm": 599,
+                "seat_tube_mm": 583
             }
         ],
         "builds": [
@@ -590,9 +789,7 @@
                 "color": "Red/Black",
                 "price_eur": 12999,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e4/Ben_O%27Connor_Tour_de_France_2021.jpg",
-                    "https://bmc-switzerland.com/cdn/shop/files/Teammachine_SLR01_ONE_2024_Side.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/6/69/BMC_-_SLR01_teammachine_%289357491022%29.jpg"
+                    "b10.png"
                 ],
                 "specs": {
                     "groupset": "Campagnolo Super Record EPS",
@@ -602,6 +799,652 @@
                 "inventory": {
                     "54": 2,
                     "56": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "b11",
+        "brand": "Van Rysel",
+        "model": "RCR Pro",
+        "year": 2025,
+        "category": "All-Rounder",
+        "description": "La bicicleta del equipo Decathlon AG2R La Mondiale. Prestaciones World Tour a precio imbatible.",
+        "official_url": "https://www.decathlon.es/es/p/bicicleta-carretera-van-rysel-rcr-pro-shimano-dura-ace-di2/_/R-p-344426",
+        "geometry": [
+            {
+                "size": "XS",
+                "stack_mm": 505,
+                "reach_mm": 374,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 435
+            },
+            {
+                "size": "S",
+                "stack_mm": 526,
+                "reach_mm": 384,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 460
+            },
+            {
+                "size": "M",
+                "stack_mm": 547,
+                "reach_mm": 393,
+                "top_tube_mm": 555,
+                "seat_tube_mm": 490
+            },
+            {
+                "size": "L",
+                "stack_mm": 571,
+                "reach_mm": 402,
+                "top_tube_mm": 575,
+                "seat_tube_mm": 520
+            },
+            {
+                "size": "XL",
+                "stack_mm": 596,
+                "reach_mm": 412,
+                "top_tube_mm": 595,
+                "seat_tube_mm": 550
+            }
+        ],
+        "builds": [
+            {
+                "id": "b11-v1",
+                "name": "Team Replica",
+                "color": "Decathlon Blue",
+                "price_eur": 9000,
+                "images": [
+                    "b11.webp"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Swiss Side Hadron Ultimate 500",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "M": 10,
+                    "L": 8
+                }
+            }
+        ]
+    },
+    {
+        "id": "b12",
+        "brand": "Merida",
+        "model": "Reacto Team",
+        "year": 2025,
+        "category": "Aero",
+        "description": "Aerodin\u00e1mica redefinida. La elecci\u00f3n del Bahrain Victorious.",
+        "official_url": "https://www.merida-bikes.com/es-es/bike/4102/reacto-team",
+        "geometry": [
+            {
+                "size": "XXS",
+                "stack_mm": 517,
+                "reach_mm": 372,
+                "top_tube_mm": 520,
+                "seat_tube_mm": 470
+            },
+            {
+                "size": "XS",
+                "stack_mm": 529,
+                "reach_mm": 382,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 500
+            },
+            {
+                "size": "S",
+                "stack_mm": 542,
+                "reach_mm": 390,
+                "top_tube_mm": 545,
+                "seat_tube_mm": 520
+            },
+            {
+                "size": "M",
+                "stack_mm": 557,
+                "reach_mm": 395,
+                "top_tube_mm": 560,
+                "seat_tube_mm": 540
+            },
+            {
+                "size": "L",
+                "stack_mm": 571,
+                "reach_mm": 409,
+                "top_tube_mm": 575,
+                "seat_tube_mm": 560
+            },
+            {
+                "size": "XL",
+                "stack_mm": 589,
+                "reach_mm": 417,
+                "top_tube_mm": 590,
+                "seat_tube_mm": 590
+            }
+        ],
+        "builds": [
+            {
+                "id": "b12-v1",
+                "name": "Team Pearl",
+                "color": "Pearl White/Black",
+                "price_eur": 10999,
+                "images": [
+                    "b12.png"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Vision Metron 60 SL",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "S": 3,
+                    "M": 6
+                }
+            }
+        ]
+    },
+    {
+        "id": "b13",
+        "brand": "Factor",
+        "model": "OSTRO VAM",
+        "year": 2025,
+        "category": "All-Rounder Aero",
+        "description": "Todo lo que necesitas. Aerodin\u00e1mica, ligereza y comodidad.",
+        "official_url": "https://factorbikes.com/products/ostro-vam",
+        "geometry": [
+            {
+                "size": "49",
+                "stack_mm": 506,
+                "reach_mm": 376,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 455
+            },
+            {
+                "size": "52",
+                "stack_mm": 525,
+                "reach_mm": 384,
+                "top_tube_mm": 534,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "54",
+                "stack_mm": 542,
+                "reach_mm": 392,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 505
+            },
+            {
+                "size": "56",
+                "stack_mm": 565,
+                "reach_mm": 401,
+                "top_tube_mm": 568,
+                "seat_tube_mm": 525
+            },
+            {
+                "size": "58",
+                "stack_mm": 587,
+                "reach_mm": 409,
+                "top_tube_mm": 585,
+                "seat_tube_mm": 545
+            },
+            {
+                "size": "61",
+                "stack_mm": 612,
+                "reach_mm": 417,
+                "top_tube_mm": 605,
+                "seat_tube_mm": 570
+            }
+        ],
+        "builds": [
+            {
+                "id": "b13-v1",
+                "name": "Dura-Ace",
+                "color": "Gloss Chrome",
+                "price_eur": 13500,
+                "images": [
+                    "b13.webp"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Black Inc 48|58",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "54": 1,
+                    "56": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "b14",
+        "brand": "Berria",
+        "model": "Belador BR",
+        "year": 2025,
+        "category": "All-Rounder",
+        "description": "Tecnolog\u00eda espa\u00f1ola de alto rendimiento. Rigidez y ligereza.",
+        "official_url": "https://berriabikes.com/es/bicicletas/carretera/belador-br",
+        "geometry": [
+            {
+                "size": "XS",
+                "stack_mm": 518,
+                "reach_mm": 374,
+                "top_tube_mm": 520,
+                "seat_tube_mm": 460
+            },
+            {
+                "size": "S",
+                "stack_mm": 532,
+                "reach_mm": 381,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "M",
+                "stack_mm": 548,
+                "reach_mm": 389,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 500
+            },
+            {
+                "size": "L",
+                "stack_mm": 568,
+                "reach_mm": 397,
+                "top_tube_mm": 565,
+                "seat_tube_mm": 520
+            },
+            {
+                "size": "XL",
+                "stack_mm": 588,
+                "reach_mm": 405,
+                "top_tube_mm": 580,
+                "seat_tube_mm": 540
+            }
+        ],
+        "builds": [
+            {
+                "id": "b14-v1",
+                "name": "LTD",
+                "color": "Rainbow Blue",
+                "price_eur": 8500,
+                "images": [
+                    "b14.png"
+                ],
+                "specs": {
+                    "groupset": "SRAM Red eTap AXS",
+                    "wheelset": "Zipp 303 Firecrest",
+                    "power_meter": "Quarq"
+                },
+                "inventory": {
+                    "M": 4,
+                    "L": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "b15",
+        "brand": "Vitoria",
+        "model": "Nyxtralight Special Edition",
+        "year": 2024,
+        "category": "Endurance/Race",
+        "description": "Artesan\u00eda espa\u00f1ola en su m\u00e1xima expresi\u00f3n.",
+        "official_url": "https://www.vitoriabikes.es/bicicletas-carretera",
+        "geometry": [
+            {
+                "size": "48",
+                "stack_mm": 515,
+                "reach_mm": 370,
+                "top_tube_mm": 510,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "51",
+                "stack_mm": 530,
+                "reach_mm": 378,
+                "top_tube_mm": 530,
+                "seat_tube_mm": 510
+            },
+            {
+                "size": "54",
+                "stack_mm": 545,
+                "reach_mm": 385,
+                "top_tube_mm": 545,
+                "seat_tube_mm": 540
+            },
+            {
+                "size": "57",
+                "stack_mm": 565,
+                "reach_mm": 392,
+                "top_tube_mm": 560,
+                "seat_tube_mm": 570
+            }
+        ],
+        "builds": [
+            {
+                "id": "b15-v1",
+                "name": "Ultegra",
+                "color": "Classic Black",
+                "price_eur": 3500,
+                "images": [
+                    "b15.png"
+                ],
+                "specs": {
+                    "groupset": "Shimano Ultegra Mechanical",
+                    "wheelset": "Vision Team 35",
+                    "power_meter": "N/A"
+                },
+                "inventory": {
+                    "51": 5,
+                    "54": 5
+                }
+            }
+        ]
+    },
+    {
+        "id": "b16",
+        "brand": "Wilier",
+        "model": "Filante SLR",
+        "year": 2024,
+        "category": "Aero/All-Rounder",
+        "description": "La elecci\u00f3n del equipo Astana. Aerodin\u00e1mica refinada y peso pluma.",
+        "official_url": "https://wilier.com/es/bicicletas/carretera/filante-slr",
+        "geometry": [
+            {
+                "size": "XS",
+                "stack_mm": 513,
+                "reach_mm": 373,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 440
+            },
+            {
+                "size": "S",
+                "stack_mm": 526,
+                "reach_mm": 379,
+                "top_tube_mm": 530,
+                "seat_tube_mm": 470
+            },
+            {
+                "size": "M",
+                "stack_mm": 542,
+                "reach_mm": 388,
+                "top_tube_mm": 545,
+                "seat_tube_mm": 500
+            },
+            {
+                "size": "L",
+                "stack_mm": 560,
+                "reach_mm": 395,
+                "top_tube_mm": 560,
+                "seat_tube_mm": 530
+            },
+            {
+                "size": "XL",
+                "stack_mm": 580,
+                "reach_mm": 405,
+                "top_tube_mm": 575,
+                "seat_tube_mm": 560
+            }
+        ],
+        "builds": [
+            {
+                "id": "b16-v1",
+                "name": "Ramato / Team",
+                "color": "Astana Team",
+                "price_eur": 9400,
+                "images": [
+                    "b16.png"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Wilier SLR42KC",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "M": 3,
+                    "L": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "b17",
+        "brand": "Bianchi",
+        "model": "Oltre RC",
+        "year": 2024,
+        "category": "Aero",
+        "description": "Hiperbike. La revoluci\u00f3n aerodin\u00e1mica con tecnolog\u00eda Air Deflector.",
+        "official_url": "https://www.bianchi.com/store/es_ES/bikes/road/racing-road/oltre-rc.html",
+        "geometry": [
+            {
+                "size": "47",
+                "stack_mm": 502,
+                "reach_mm": 375,
+                "top_tube_mm": 515,
+                "seat_tube_mm": 420
+            },
+            {
+                "size": "50",
+                "stack_mm": 518,
+                "reach_mm": 382,
+                "top_tube_mm": 525,
+                "seat_tube_mm": 450
+            },
+            {
+                "size": "53",
+                "stack_mm": 535,
+                "reach_mm": 388,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "55",
+                "stack_mm": 555,
+                "reach_mm": 395,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 500
+            },
+            {
+                "size": "57",
+                "stack_mm": 575,
+                "reach_mm": 402,
+                "top_tube_mm": 570,
+                "seat_tube_mm": 520
+            }
+        ],
+        "builds": [
+            {
+                "id": "b17-v1",
+                "name": "Tour de France Limited",
+                "color": "Celeste / Black",
+                "price_eur": 12500,
+                "images": [
+                    "b17.png"
+                ],
+                "specs": {
+                    "groupset": "SRAM Red eTap AXS",
+                    "wheelset": "Reparto Corse RC50",
+                    "power_meter": "Quarq"
+                },
+                "inventory": {
+                    "53": 1,
+                    "55": 4
+                }
+            }
+        ]
+    },
+    {
+        "id": "b18",
+        "brand": "Rose",
+        "model": "XLITE 06",
+        "year": 2024,
+        "category": "Lightweight Aero",
+        "description": "Ingenier\u00eda alemana. M\u00e1xima velocidad y ligereza a un precio imbatible.",
+        "official_url": "https://www.rosebikes.es/bicicletas/carretera/carreras/xlite",
+        "geometry": [
+            {
+                "size": "50",
+                "stack_mm": 522,
+                "reach_mm": 375,
+                "top_tube_mm": 520,
+                "seat_tube_mm": 455
+            },
+            {
+                "size": "53",
+                "stack_mm": 542,
+                "reach_mm": 385,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "55",
+                "stack_mm": 560,
+                "reach_mm": 395,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 505
+            },
+            {
+                "size": "57",
+                "stack_mm": 580,
+                "reach_mm": 405,
+                "top_tube_mm": 565,
+                "seat_tube_mm": 530
+            }
+        ],
+        "builds": [
+            {
+                "id": "b18-v1",
+                "name": "Red eTap",
+                "color": "Matt Carbon",
+                "price_eur": 7999,
+                "images": [
+                    "b18.png"
+                ],
+                "specs": {
+                    "groupset": "SRAM Red eTap AXS",
+                    "wheelset": "Rose RC Sixty",
+                    "power_meter": "SRAM"
+                },
+                "inventory": {
+                    "53": 5,
+                    "55": 5
+                }
+            }
+        ]
+    },
+    {
+        "id": "b19",
+        "brand": "Cube",
+        "model": "Litening AIR C:68X",
+        "year": 2024,
+        "category": "Climbing",
+        "description": "Peso pluma aerodin\u00e1mico. Usada por el Intermarch\u00e9-Wanty.",
+        "official_url": "https://www.cube.eu/es-es/cube-litening-air-c-68x-slt-carbon-n-black/679700",
+        "geometry": [
+            {
+                "size": "50",
+                "stack_mm": 517,
+                "reach_mm": 381,
+                "top_tube_mm": 523,
+                "seat_tube_mm": 440
+            },
+            {
+                "size": "52",
+                "stack_mm": 535,
+                "reach_mm": 385,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 460
+            },
+            {
+                "size": "54",
+                "stack_mm": 552,
+                "reach_mm": 389,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "56",
+                "stack_mm": 571,
+                "reach_mm": 396,
+                "top_tube_mm": 565,
+                "seat_tube_mm": 500
+            }
+        ],
+        "builds": [
+            {
+                "id": "b19-v1",
+                "name": "SLT",
+                "color": "Carbon 'n' Black",
+                "price_eur": 7500,
+                "images": [
+                    "b19.png"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Newmen Advanced SL R.50",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "54": 3,
+                    "56": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "b20",
+        "brand": "Ridley",
+        "model": "Falcn RS",
+        "year": 2024,
+        "category": "All-Rounder",
+        "description": "La bicicleta para todo. R\u00e1pida en el llano, ligera en la subida.",
+        "official_url": "https://www.ridley-bikes.com/en_ES/bikes/Road/Falcn%20RS",
+        "geometry": [
+            {
+                "size": "XS",
+                "stack_mm": 525,
+                "reach_mm": 375,
+                "top_tube_mm": 525,
+                "seat_tube_mm": 450
+            },
+            {
+                "size": "S",
+                "stack_mm": 545,
+                "reach_mm": 385,
+                "top_tube_mm": 545,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "M",
+                "stack_mm": 565,
+                "reach_mm": 393,
+                "top_tube_mm": 565,
+                "seat_tube_mm": 510
+            },
+            {
+                "size": "L",
+                "stack_mm": 585,
+                "reach_mm": 401,
+                "top_tube_mm": 585,
+                "seat_tube_mm": 540
+            }
+        ],
+        "builds": [
+            {
+                "id": "b20-v1",
+                "name": "Team Edition",
+                "color": "Lotto Dstny",
+                "price_eur": 9000,
+                "images": [
+                    "b20.png"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "DT Swiss ARC 1400",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "S": 2,
+                    "M": 3
                 }
             }
         ]

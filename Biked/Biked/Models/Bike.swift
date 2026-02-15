@@ -24,6 +24,10 @@ struct BikeBuild: Identifiable, Codable, Hashable {
         case id, name, color, images, specs, inventory
         case priceEur = "price_eur"
     }
+    
+    var formattedPrice: String {
+        return "€\(Int(priceEur))"
+    }
 }
 
 struct Bike: Identifiable, Codable, Hashable {
@@ -33,12 +37,30 @@ struct Bike: Identifiable, Codable, Hashable {
     let year: Int
     let category: String
     let description: String
+    let officialUrl: String?
     let geometry: [Geometry]
     let builds: [BikeBuild]
     
     // Computed helper to get a representative image (first build, first image)
     var mainImage: URL? {
-        return builds.first?.images.first
+        guard let url = builds.first?.images.first else { return nil }
+        return resolveImageURL(url)
+    }
+    
+    func resolveImageURL(_ url: URL) -> URL? {
+        if url.scheme?.hasPrefix("http") == true {
+            return url
+        }
+        
+        // Local file logic (Check 'BikeImages' folder in Bundle)
+        let filename = url.lastPathComponent
+        return Bundle.main.url(forResource: filename, withExtension: nil)
+            ?? Bundle.main.url(forResource: filename, withExtension: nil, subdirectory: "BikeImages")
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id, brand, model, year, category, description, geometry, builds
+        case officialUrl = "official_url"
     }
     
     var priceRange: String {
