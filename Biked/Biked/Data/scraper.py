@@ -95,13 +95,12 @@ def get_initial_database():
         Geometry("60", 601, 399, 586, 72.8, 73.9),
         Geometry("62", 620, 403, 598, 72.5, 74.0)
     ]
-    # NOTE: Using official Trek image URL (often stable) or a placeholder if scraping fails
     bikes.append(Bike(
         "trek-madone-slr", 
         "Trek", 
         "Madone SLR Gen 7", 
         12000.0, 
-        "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920/MadoneSLR9AXSGen7-23-41764-A-Portrait",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f8/Trek_MADONE.jpg", # Verified Wikimedia
         trek_geo
     ))
 
@@ -119,7 +118,7 @@ def get_initial_database():
         "Cannondale",
         "SuperSix EVO Hi-Mod",
         11500.0,
-        "https://embed.widencdn.net/img/dorelrl/nx5y4s3p6n/2000px/C23_C11202U_SuperSix_EVO_Hi_MOD_1_BLU_PD.png",
+        "https://upload.wikimedia.org/wikipedia/commons/2/27/Cannondale_SuperSix.jpg", # Verified Wikimedia
         c_geo
     ))
     
@@ -138,11 +137,11 @@ def get_initial_database():
         "Pinarello",
         "Dogma F",
         14500.0,
-        "https://pinarello.es/imgs/productos/ciclismo/carretera/dogma-f/dogma-f-disc-dura-ace-di2-2x12/DOGMA-F-DISC_BLACK-ON-BLACK_B301-1.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/37/Pinarello_Dogma_F_Super_Record_EPS.jpg", # Verified Wikimedia
         pin_geo
     ))
     
-    # GIANT PROPEL
+    # GIANT PROPEL (Using a generic placeholder for now as specific Wiki image wasn't found)
     giant_geo = [
         Geometry("XS", 500, 365, 515, 74.5, 71.0),
         Geometry("S", 520, 375, 535, 74.0, 72.5),
@@ -156,7 +155,7 @@ def get_initial_database():
         "Giant",
         "Propel Advanced SL 0",
         12000.0,
-        "https://images2.giant-bicycles.com/b_white,c_pad,h_800,q_80,w_1200/2202271836/MY23PropelAdvancedSL0_ColorAWeathervane_SilverPine.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Giant_Bicycles_Logo.svg/640px-Giant_Bicycles_Logo.svg.png", # Fallback to logo
         giant_geo
     ))
 

@@ -4,7 +4,7 @@
         "brand": "Trek",
         "modelName": "Madone SLR Gen 7",
         "price": 12000.0,
-        "imageUrl": "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920/MadoneSLR9AXSGen7-23-41764-A-Portrait",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Trek_MADONE.jpg",
         "geometries": [
             {
                 "sizeLabel": "47",
@@ -77,7 +77,7 @@
         "brand": "Cannondale",
         "modelName": "SuperSix EVO Hi-Mod",
         "price": 11500.0,
-        "imageUrl": "https://embed.widencdn.net/img/dorelrl/nx5y4s3p6n/2000px/C23_C11202U_SuperSix_EVO_Hi_MOD_1_BLU_PD.png",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Cannondale_SuperSix.jpg",
         "geometries": [
             {
                 "sizeLabel": "44",
@@ -134,7 +134,7 @@
         "brand": "Pinarello",
         "modelName": "Dogma F",
         "price": 14500.0,
-        "imageUrl": "https://pinarello.es/imgs/productos/ciclismo/carretera/dogma-f/dogma-f-disc-dura-ace-di2-2x12/DOGMA-F-DISC_BLACK-ON-BLACK_B301-1.jpg",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Pinarello_Dogma_F_Super_Record_EPS.jpg",
         "geometries": [
             {
                 "sizeLabel": "430",
@@ -199,7 +199,7 @@
         "brand": "Giant",
         "modelName": "Propel Advanced SL 0",
         "price": 12000.0,
-        "imageUrl": "https://images2.giant-bicycles.com/b_white,c_pad,h_800,q_80,w_1200/2202271836/MY23PropelAdvancedSL0_ColorAWeathervane_SilverPine.jpg",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Giant_Bicycles_Logo.svg/640px-Giant_Bicycles_Logo.svg.png",
         "geometries": [
             {
                 "sizeLabel": "XS",
