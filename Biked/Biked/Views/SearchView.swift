@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State private var viewModel = SearchViewModel()
+    @State private var isFiltersExpanded = true
     
     var body: some View {
         NavigationStack {
@@ -11,70 +12,108 @@ struct SearchView: View {
                     .bold()
                     .padding()
                 
-                // Mode Selection
-                Picker("Modo de Búsqueda", selection: $viewModel.searchMode) {
-                    Text("Por Medidas").tag(SearchViewModel.SearchMode.biometric)
-                    Text("Por Geometría").tag(SearchViewModel.SearchMode.geometric)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding(.horizontal)
-                
-                VStack(spacing: 20) {
-                    if viewModel.searchMode == .biometric {
-                        // Biometric Inputs
-                        TextField("Altura del Ciclista (cm)", text: $viewModel.userHeight)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
+                if isFiltersExpanded {
+                    // Mode Selection
+                    Picker("Modo de Búsqueda", selection: $viewModel.searchMode) {
+                        Text("Por Medidas").tag(SearchViewModel.SearchMode.biometric)
+                        Text("Por Geometría").tag(SearchViewModel.SearchMode.geometric)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding(.horizontal)
+                    
+                    VStack(spacing: 20) {
+                        if viewModel.searchMode == .biometric {
+                            // Biometric Inputs
+                            TextField("Altura del Ciclista (cm)", text: $viewModel.userHeight)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.numberPad)
+                            
+                            TextField("Entrepierna (cm)", text: $viewModel.userInseam)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.numberPad)
+                            
+                            if let stack = viewModel.targetStack, let reach = viewModel.targetReach {
+                                VStack(spacing: 5) {
+                                    Text("Geometría Estimada:")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Text("Stack: \(Int(stack))mm | Reach: \(Int(reach))mm")
+                                        .font(.system(.subheadline, design: .monospaced))
+                                        .bold()
+                                }
+                                .padding(10)
+                                .background(Color.blue.opacity(0.1))
+                                .cornerRadius(8)
+                            }
+                            
+                        } else {
+                            // Geometric Inputs
+                            TextField("Stack (mm)", text: $viewModel.userStack)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.numberPad)
+                            
+                            TextField("Reach (mm)", text: $viewModel.userReach)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.numberPad)
+                        }
                         
-                        TextField("Entrepierna (cm)", text: $viewModel.userInseam)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
-                        
-                        if let stack = viewModel.targetStack, let reach = viewModel.targetReach {
-                            VStack(spacing: 5) {
-                                Text("Geometría Estimada:")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                                Text("Stack: \(Int(stack))mm | Reach: \(Int(reach))mm")
-                                    .font(.system(.subheadline, design: .monospaced))
+                        Button(action: {
+                            Task {
+                                withAnimation {
+                                    isFiltersExpanded = false
+                                }
+                                await viewModel.search()
+                            }
+                        }) {
+                            if viewModel.isSearching {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                            } else {
+                                Text("Buscar")
                                     .bold()
                             }
-                            .padding(10)
-                            .background(Color.blue.opacity(0.1))
-                            .cornerRadius(8)
                         }
-                        
-                    } else {
-                        // Geometric Inputs
-                        TextField("Stack (mm)", text: $viewModel.userStack)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
-                        
-                        TextField("Reach (mm)", text: $viewModel.userReach)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                     }
-                    
-                    Button(action: {
-                        Task {
-                            await viewModel.search()
-                        }
-                    }) {
-                        if viewModel.isSearching {
-                            ProgressView()
-                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        } else {
-                            Text("Buscar")
-                                .bold()
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
+                    .transition(.move(edge: .top).combined(with: .opacity))
+                    
+                } else {
+                    // Collapsed View (Summary)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Buscando por: \(viewModel.searchMode == .biometric ? "Medidas" : "Geometría")")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            
+                            if viewModel.searchMode == .biometric {
+                                Text("H: \(viewModel.userHeight)cm | I: \(viewModel.userInseam)cm")
+                                    .font(.headline)
+                            } else {
+                                Text("S: \(viewModel.userStack)mm | R: \(viewModel.userReach)mm")
+                                    .font(.headline)
+                            }
+                        }
+                        Spacer()
+                        Button("Modificar") {
+                            withAnimation {
+                                isFiltersExpanded = true
+                            }
+                        }
+                        .font(.subheadline)
+                        .bold()
+                        .foregroundColor(.blue)
+                    }
+                    .padding()
+                    .background(Color.gray.opacity(0.1))
                     .cornerRadius(10)
+                    .padding(.horizontal)
+                    .transition(.move(edge: .top).combined(with: .opacity))
                 }
-                .padding()
                 
                 if let error = viewModel.errorMessage {
                     Text(error)

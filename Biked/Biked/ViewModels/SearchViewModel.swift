@@ -107,12 +107,12 @@ class SearchViewModel {
         // Estimation Formulas (Endurance Road Bike / Gran Fondo)
         // Stack: Highly correlated with leg length (Inseam)
         // Formula: Inseam * 0.69 (Common fit shorthand)
-        let estimatedStack = validInseam * 0.69
+        // Formula: Inseam * 0.69 (Common fit shorthand) -> Result is in CM, convert to MM
+        let estimatedStack = validInseam * 0.69 * 10
         
         // Reach: Correlated with overall height
-        // Formula: Height * 0.225 (Approximate for comfortable position)
-        // Alternatively: (Height * 2.5) / 10 + Adjustment... simple ratio works best for starter.
-        let estimatedReach = validHeight * 0.225
+        // Formula: Height * 0.225 (Approximate for comfortable position) -> Result is in CM, convert to MM
+        let estimatedReach = validHeight * 0.225 * 10
         
         return (estimatedStack, estimatedReach)
     }
