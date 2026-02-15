@@ -1,173 +1,247 @@
 import SwiftUI
-import Charts
 
 struct BikeDetailView: View {
-    let result: MatchingResult
-    @Environment(FavoritesViewModel.self) private var favoritesViewModel
+    let bike: Bike
+    let matchedGeometry: Geometry?
+    
+    @State private var selectedBuildId: String
+    @State private var currentImageIndex = 0
+    
+    init(bike: Bike, matchedGeometry: Geometry? = nil) {
+        self.bike = bike
+        self.matchedGeometry = matchedGeometry
+        // Default to first build
+        _selectedBuildId = State(initialValue: bike.builds.first?.id ?? "")
+    }
+    
+    var selectedBuild: BikeBuild? {
+        bike.builds.first(where: { $0.id == selectedBuildId })
+    }
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
-                // Hero Image
-                AsyncImage(url: result.bike.imageUrl) { phase in
-                    if let image = phase.image {
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    } else if phase.error != nil {
-                        ZStack {
-                            Color.gray.opacity(0.1)
-                            Image(systemName: "bicycle")
-                                .font(.system(size: 60))
-                                .foregroundStyle(.gray)
-                            Text("No Image Available")
-                                .font(.caption)
-                                .foregroundStyle(.gray)
-                                .padding(.top, 80)
-                        }
-                        .frame(height: 250)
-                    } else {
-                        Color.gray.opacity(0.1)
-                            .frame(height: 250)
-                            .overlay(ProgressView())
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .background(Color.white)
+            VStack(alignment: .leading, spacing: 20) {
                 
-                VStack(alignment: .leading, spacing: 24) {
-                    // Header Info
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack {
-                            Text(result.bike.brand)
-                                .font(.headline)
-                                .foregroundStyle(.secondary)
-                            Spacer()
-                            Button(action: {
-                                favoritesViewModel.toggleFavorite(bikeId: result.bike.id)
-                            }) {
-                                Image(systemName: favoritesViewModel.isFavorite(bikeId: result.bike.id) ? "heart.fill" : "heart")
-                                    .font(.title2)
-                                    .foregroundStyle(.red)
+                // --- IMAGE CAROUSEL ---
+                if let build = selectedBuild, !build.images.isEmpty {
+                    TabView(selection: $currentImageIndex) {
+                        ForEach(0..<build.images.count, id: \.self) { index in
+                            AsyncImage(url: build.images[index]) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            } placeholder: {
+                                ProgressView()
                             }
+                            .tag(index)
                         }
-                        
-                        Text(result.bike.modelName)
-                            .font(.system(size: 32, weight: .bold))
-                            .foregroundStyle(.primary)
-                        
-                        Text(String(format: "€%.0f", result.bike.price))
-                            .font(.title2)
-                            .foregroundStyle(.primary)
                     }
+                    .tabViewStyle(PageTabViewStyle())
+                    .frame(height: 250)
+                } else {
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.2))
+                        .frame(height: 250)
+                        .overlay(Text("No Image Available"))
+                }
+                
+                VStack(alignment: .leading, spacing: 15) {
+                    // --- HEADER ---
+                    Text(bike.brand.uppercased())
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                    
+                    Text(bike.model)
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    
+                    Text("\(bike.category) • \(String(bike.year))")
+                        .font(.caption)
+                        .padding(5)
+                        .background(Color.blue.opacity(0.1))
+                        .cornerRadius(5)
+                    
+                    Text(bike.description)
+                        .font(.body)
+                        .foregroundColor(.secondary)
                     
                     Divider()
                     
-                    // Match Info
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Tu Talla Ideal: \(result.matchedGeometry.sizeLabel)")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                        
-                        Text("Esta talla es la que mejor se adapta a tu Stack/Reach con una desviación de \(String(format: "%.1f", result.distance))mm.")
-                            .font(.body)
-                            .foregroundStyle(.secondary)
-                    }
-                    
-                    Divider()
-                    
-                    // Geometry Comparison Chart
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text("Comparativa de Geometría")
+                    // --- BUILD SELECTION ---
+                    if bike.builds.count > 1 {
+                        Text("Montaje y Color")
                             .font(.headline)
                         
-                        Chart {
-                            // User Point
-                            PointMark(
-                                x: .value("Reach", result.userReach),
-                                y: .value("Stack", result.userStack)
-                            )
-                            .symbol {
-                                Circle()
-                                    .fill(Color.blue)
-                                    .frame(width: 12, height: 12)
-                            }
-                            .annotation(position: .top) {
-                                Text("Tú")
-                                    .font(.caption)
-                                    .bold()
-                                    .foregroundStyle(.blue)
-                            }
-                            
-                            // Bike Geometries
-                            ForEach(result.bike.geometries) { geo in
-                                PointMark(
-                                    x: .value("Reach", geo.reach),
-                                    y: .value("Stack", geo.stack)
-                                )
-                                .foregroundStyle(geo.id == result.matchedGeometry.id ? Color.green : Color.gray.opacity(0.3))
-                                .symbolSize(geo.id == result.matchedGeometry.id ? 100 : 50)
-                                .annotation(position: .top) {
-                                    if geo.id == result.matchedGeometry.id {
-                                        Text(geo.sizeLabel)
-                                            .font(.caption)
-                                            .bold()
-                                            .foregroundStyle(.green)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(bike.builds) { build in
+                                    Button(action: {
+                                        selectedBuildId = build.id
+                                        currentImageIndex = 0
+                                    }) {
+                                        VStack(alignment: .leading) {
+                                            Text(build.name)
+                                                .font(.caption)
+                                                .bold()
+                                            Text(build.color)
+                                                .font(.caption2)
+                                                .foregroundColor(.secondary)
+                                            Text("€\(Int(build.priceEur))")
+                                                .font(.caption)
+                                                .foregroundColor(.blue)
+                                        }
+                                        .padding()
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(selectedBuildId == build.id ? Color.blue : Color.gray.opacity(0.3), lineWidth: 2)
+                                        )
                                     }
+                                    .foregroundColor(.primary)
                                 }
                             }
                         }
-                        .chartXAxisLabel("Reach (mm)")
-                        .chartYAxisLabel("Stack (mm)")
-                        .frame(height: 250)
-                        .padding()
-                        .background(Color(UIColor.secondarySystemBackground))
-                        .cornerRadius(12)
+                    }
+                    
+                    // --- SPECS & PRICE ---
+                    if let build = selectedBuild {
+                        HStack {
+                            Text("Precio")
+                            Spacer()
+                            Text("€\(Int(build.priceEur))")
+                                .font(.title3)
+                                .bold()
+                        }
+                        .padding(.vertical, 5)
                         
-                        Text("El punto verde muestra la talla recomendada. Los puntos grises son otras tallas de este modelo.")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                        GroupBox(label: Label("Especificaciones", systemImage: "gear")) {
+                            VStack(alignment: .leading, spacing: 10) {
+                                SpecRow(icon: "bicycle", title: "Grupo", value: build.specs.groupset)
+                                SpecRow(icon: "circle.circle", title: "Ruedas", value: build.specs.wheelset)
+                                SpecRow(icon: "bolt", title: "Potenciómetro", value: build.specs.powerMeter)
+                            }
+                            .padding(.top, 5)
+                        }
+                        
+                        // --- INVENTORY ---
+                        GroupBox(label: Label("Disponibilidad", systemImage: "shippingbox")) {
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))], spacing: 10) {
+                                ForEach(build.inventory.keys.sorted(), id: \.self) { size in
+                                    let qty = build.inventory[size] ?? 0
+                                    VStack {
+                                        Text(size)
+                                            .font(.caption)
+                                            .bold()
+                                        Text(qty > 0 ? "\(qty)" : "Agotado")
+                                            .font(.caption2)
+                                            .foregroundColor(qty > 0 ? .green : .red)
+                                    }
+                                    .padding(8)
+                                    .background(Color.gray.opacity(0.1))
+                                    .cornerRadius(8)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(matchedGeometry?.size == size ? Color.green : Color.clear, lineWidth: 2)
+                                    )
+                                }
+                            }
+                            .padding(.top, 5)
+                        }
                     }
                     
                     Divider()
                     
-                    // Specs Table
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Detalles Geometría (\(result.matchedGeometry.sizeLabel))")
-                            .font(.headline)
-                        
-                        GeometryRow(label: "Stack", value: String(format: "%.0f mm", result.matchedGeometry.stack))
-                        GeometryRow(label: "Reach", value: String(format: "%.0f mm", result.matchedGeometry.reach))
-                        if let tt = result.matchedGeometry.topTubeLength {
-                            GeometryRow(label: "Tubo Superior", value: String(format: "%.0f mm", tt))
-                        }
-                        if let sta = result.matchedGeometry.seatTubeAngle {
-                            GeometryRow(label: "Ángulo Sillín", value: String(format: "%.1f°", sta))
-                        }
-                        if let hta = result.matchedGeometry.headTubeAngle {
-                            GeometryRow(label: "Ángulo Dirección", value: String(format: "%.1f°", hta))
-                        }
-                    }
+                    // --- GEOMETRY ---
+                    Text("Geometría")
+                        .font(.title2)
+                        .bold()
+                    
+                    GeometryViewUpdated(bike: bike, matchedGeometry: matchedGeometry)
                 }
-                .padding(20)
+                .padding()
             }
         }
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct GeometryRow: View {
-    let label: String
+// Helper View for Specs
+struct SpecRow: View {
+    let icon: String
+    let title: String
     let value: String
     
     var body: some View {
         HStack {
-            Text(label)
-                .foregroundStyle(.secondary)
+            Image(systemName: icon)
+                .frame(width: 25)
+                .foregroundColor(.blue)
+            Text(title)
+                .font(.subheadline)
+                .foregroundColor(.secondary)
             Spacer()
             Text(value)
-                .fontWeight(.medium)
+                .font(.subheadline)
+                .multilineTextAlignment(.trailing)
         }
-        .padding(.vertical, 4)
+    }
+}
+
+// Updated Geometry View to handle new model
+struct GeometryViewUpdated: View {
+    let bike: Bike
+    let matchedGeometry: Geometry?
+    
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: true) {
+            VStack(spacing: 0) {
+                // Header Row
+                HStack(spacing: 0) {
+                    HeaderCell(text: "Size")
+                    HeaderCell(text: "Stack")
+                    HeaderCell(text: "Reach")
+                    HeaderCell(text: "Top Tube")
+                    HeaderCell(text: "Seat Tube")
+                }
+                .background(Color.gray.opacity(0.2))
+                
+                // Data Rows
+                ForEach(bike.geometry, id: \.id) { geo in
+                    let isMatch = geo.id == matchedGeometry?.id
+                    HStack(spacing: 0) {
+                        DataCell(text: geo.size, isHighlight: isMatch)
+                        DataCell(text: "\(Int(geo.stack))", isHighlight: isMatch)
+                        DataCell(text: "\(Int(geo.reach))", isHighlight: isMatch)
+                        DataCell(text: "\(Int(geo.topTubeMm ?? 0))", isHighlight: isMatch)
+                        DataCell(text: "\(Int(geo.seatTubeMm ?? 0))", isHighlight: isMatch)
+                    }
+                    .background(isMatch ? Color.green.opacity(0.2) : Color.clear)
+                }
+            }
+            .cornerRadius(10)
+            .padding(.bottom, 20)
+        }
+    }
+}
+
+struct HeaderCell: View {
+    let text: String
+    var body: some View {
+        Text(text)
+            .bold()
+            .frame(width: 80, height: 40)
+            .border(Color.gray.opacity(0.1))
+    }
+}
+
+struct DataCell: View {
+    let text: String
+    let isHighlight: Bool
+    var body: some View {
+        Text(text)
+            .fontWeight(isHighlight ? .bold : .regular)
+            .frame(width: 80, height: 40)
+            .border(Color.gray.opacity(0.1))
+            .foregroundColor(isHighlight ? .green : .primary)
     }
 }

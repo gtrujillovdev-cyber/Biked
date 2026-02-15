@@ -1,400 +1,589 @@
 [
     {
-        "id": "trek-madone-slr",
-        "brand": "Trek",
-        "modelName": "Madone SLR Gen 7",
-        "price": 12000.0,
-        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/trek_madone.jpg",
-        "geometries": [
-            {
-                "sizeLabel": "47",
-                "stack": 500,
-                "reach": 360,
-                "topTubeLength": 500,
-                "seatTubeAngle": 74.5,
-                "headTubeAngle": 70.0
-            },
-            {
-                "sizeLabel": "50",
-                "stack": 520,
-                "reach": 374,
-                "topTubeLength": 521,
-                "seatTubeAngle": 74.5,
-                "headTubeAngle": 71.0
-            },
-            {
-                "sizeLabel": "52",
-                "stack": 533,
-                "reach": 380,
-                "topTubeLength": 534,
-                "seatTubeAngle": 74.0,
-                "headTubeAngle": 72.0
-            },
-            {
-                "sizeLabel": "54",
-                "stack": 540,
-                "reach": 386,
-                "topTubeLength": 543,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "56",
-                "stack": 563,
-                "reach": 391,
-                "topTubeLength": 559,
-                "seatTubeAngle": 73.3,
-                "headTubeAngle": 73.5
-            },
-            {
-                "sizeLabel": "58",
-                "stack": 581,
-                "reach": 396,
-                "topTubeLength": 574,
-                "seatTubeAngle": 73.0,
-                "headTubeAngle": 73.8
-            },
-            {
-                "sizeLabel": "60",
-                "stack": 601,
-                "reach": 399,
-                "topTubeLength": 586,
-                "seatTubeAngle": 72.8,
-                "headTubeAngle": 73.9
-            },
-            {
-                "sizeLabel": "62",
-                "stack": 620,
-                "reach": 403,
-                "topTubeLength": 598,
-                "seatTubeAngle": 72.5,
-                "headTubeAngle": 74.0
-            }
-        ]
-    },
-    {
-        "id": "cannondale-supersix",
-        "brand": "Cannondale",
-        "modelName": "SuperSix EVO Hi-Mod",
-        "price": 11500.0,
-        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/cannondale_supersix.jpg",
-        "geometries": [
-            {
-                "sizeLabel": "44",
-                "stack": 495,
-                "reach": 365,
-                "topTubeLength": 500,
-                "seatTubeAngle": 74.5,
-                "headTubeAngle": 70.5
-            },
-            {
-                "sizeLabel": "48",
-                "stack": 515,
-                "reach": 372,
-                "topTubeLength": 515,
-                "seatTubeAngle": 74.5,
-                "headTubeAngle": 71.5
-            },
-            {
-                "sizeLabel": "51",
-                "stack": 535,
-                "reach": 378,
-                "topTubeLength": 530,
-                "seatTubeAngle": 74.0,
-                "headTubeAngle": 72.0
-            },
-            {
-                "sizeLabel": "54",
-                "stack": 555,
-                "reach": 384,
-                "topTubeLength": 545,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "56",
-                "stack": 575,
-                "reach": 390,
-                "topTubeLength": 560,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.3
-            },
-            {
-                "sizeLabel": "58",
-                "stack": 595,
-                "reach": 396,
-                "topTubeLength": 575,
-                "seatTubeAngle": 73.0,
-                "headTubeAngle": 73.5
-            }
-        ]
-    },
-    {
-        "id": "pinarello-dogma-f",
-        "brand": "Pinarello",
-        "modelName": "Dogma F",
-        "price": 14500.0,
-        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/pinarello_dogma.jpg",
-        "geometries": [
-            {
-                "sizeLabel": "430",
-                "stack": 490,
-                "reach": 355,
-                "topTubeLength": 490,
-                "seatTubeAngle": 75.0,
-                "headTubeAngle": 70.0
-            },
-            {
-                "sizeLabel": "465",
-                "stack": 505,
-                "reach": 365,
-                "topTubeLength": 505,
-                "seatTubeAngle": 74.5,
-                "headTubeAngle": 71.0
-            },
-            {
-                "sizeLabel": "500",
-                "stack": 520,
-                "reach": 375,
-                "topTubeLength": 520,
-                "seatTubeAngle": 74.0,
-                "headTubeAngle": 72.0
-            },
-            {
-                "sizeLabel": "515",
-                "stack": 535,
-                "reach": 380,
-                "topTubeLength": 530,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 72.5
-            },
-            {
-                "sizeLabel": "530",
-                "stack": 545,
-                "reach": 385,
-                "topTubeLength": 540,
-                "seatTubeAngle": 73.0,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "540",
-                "stack": 555,
-                "reach": 388,
-                "topTubeLength": 550,
-                "seatTubeAngle": 73.0,
-                "headTubeAngle": 73.2
-            },
-            {
-                "sizeLabel": "550",
-                "stack": 565,
-                "reach": 392,
-                "topTubeLength": 560,
-                "seatTubeAngle": 72.5,
-                "headTubeAngle": 73.5
-            }
-        ]
-    },
-    {
-        "id": "giant-propel-sl",
-        "brand": "Giant",
-        "modelName": "Propel Advanced SL 0",
-        "price": 12000.0,
-        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/giant_logo.png",
-        "geometries": [
-            {
-                "sizeLabel": "XS",
-                "stack": 500,
-                "reach": 365,
-                "topTubeLength": 515,
-                "seatTubeAngle": 74.5,
-                "headTubeAngle": 71.0
-            },
-            {
-                "sizeLabel": "S",
-                "stack": 520,
-                "reach": 375,
-                "topTubeLength": 535,
-                "seatTubeAngle": 74.0,
-                "headTubeAngle": 72.5
-            },
-            {
-                "sizeLabel": "M",
-                "stack": 545,
-                "reach": 383,
-                "topTubeLength": 550,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "ML",
-                "stack": 565,
-                "reach": 393,
-                "topTubeLength": 565,
-                "seatTubeAngle": 73.0,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "L",
-                "stack": 585,
-                "reach": 403,
-                "topTubeLength": 580,
-                "seatTubeAngle": 73.0,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "XL",
-                "stack": 605,
-                "reach": 413,
-                "topTubeLength": 600,
-                "seatTubeAngle": 72.5,
-                "headTubeAngle": 73.0
-            }
-        ]
-    },
-    {
-        "id": "canyon-aeroad-cfr",
-        "brand": "Canyon",
-        "modelName": "Aeroad CFR",
-        "price": 8999.0,
-        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/canyon_aeroad.jpg",
-        "geometries": [
-            {
-                "sizeLabel": "2XS",
-                "stack": 493,
-                "reach": 365,
-                "topTubeLength": 508,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 70.0
-            },
-            {
-                "sizeLabel": "XS",
-                "stack": 512,
-                "reach": 376,
-                "topTubeLength": 526,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 71.0
-            },
-            {
-                "sizeLabel": "S",
-                "stack": 533,
-                "reach": 385,
-                "topTubeLength": 543,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 72.0
-            },
-            {
-                "sizeLabel": "M",
-                "stack": 555,
-                "reach": 395,
-                "topTubeLength": 560,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "L",
-                "stack": 576,
-                "reach": 405,
-                "topTubeLength": 577,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.25
-            },
-            {
-                "sizeLabel": "XL",
-                "stack": 597,
-                "reach": 415,
-                "topTubeLength": 596,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.5
-            },
-            {
-                "sizeLabel": "2XL",
-                "stack": 618,
-                "reach": 425,
-                "topTubeLength": 616,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.75
-            }
-        ]
-    },
-    {
-        "id": "specialized-tarmac-sl8",
+        "id": "b1",
         "brand": "Specialized",
-        "modelName": "Tarmac SL8",
-        "price": 12500.0,
-        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/specialized_tarmac.jpg",
-        "geometries": [
+        "model": "S-Works Tarmac SL8",
+        "year": 2025,
+        "category": "All-Rounder",
+        "description": "La bicicleta de competición más rápida del mundo.",
+        "geometry": [
             {
-                "sizeLabel": "44",
-                "stack": 491,
-                "reach": 365,
-                "topTubeLength": 496,
-                "seatTubeAngle": 75.5,
-                "headTubeAngle": 70.5
+                "size": "49",
+                "stack_mm": 514,
+                "reach_mm": 378,
+                "top_tube_mm": 509,
+                "seat_tube_mm": 431
             },
             {
-                "sizeLabel": "49",
-                "stack": 504,
-                "reach": 375,
-                "topTubeLength": 508,
-                "seatTubeAngle": 75.5,
-                "headTubeAngle": 71.75
+                "size": "52",
+                "stack_mm": 527,
+                "reach_mm": 383,
+                "top_tube_mm": 527,
+                "seat_tube_mm": 458
             },
             {
-                "sizeLabel": "52",
-                "stack": 517,
-                "reach": 380,
-                "topTubeLength": 531,
-                "seatTubeAngle": 74.0,
-                "headTubeAngle": 72.5
+                "size": "54",
+                "stack_mm": 544,
+                "reach_mm": 387,
+                "top_tube_mm": 541,
+                "seat_tube_mm": 475
             },
             {
-                "sizeLabel": "54",
-                "stack": 534,
-                "reach": 384,
-                "topTubeLength": 541,
-                "seatTubeAngle": 74.0,
-                "headTubeAngle": 73.0
+                "size": "56",
+                "stack_mm": 565,
+                "reach_mm": 398,
+                "top_tube_mm": 562,
+                "seat_tube_mm": 496
             },
             {
-                "sizeLabel": "56",
-                "stack": 555,
-                "reach": 395,
-                "topTubeLength": 562,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.5
+                "size": "58",
+                "stack_mm": 591,
+                "reach_mm": 405,
+                "top_tube_mm": 577,
+                "seat_tube_mm": 517
+            }
+        ],
+        "builds": [
+            {
+                "id": "b1-v1",
+                "name": "Shimano Dura-Ace Di2",
+                "color": "Satin Carbon/Viavi Cyn Cyan",
+                "price_eur": 14000,
+                "images": [
+                    "https://placehold.co/600x400/1a1a1a/00ffff?text=Tarmac+SL8+Side",
+                    "https://placehold.co/600x400/1a1a1a/00ffff?text=Tarmac+SL8+Front",
+                    "https://placehold.co/600x400/1a1a1a/00ffff?text=Tarmac+SL8+Rear"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace R9270 Di2",
+                    "wheelset": "Roval Rapide CLX II",
+                    "power_meter": "4iiii Precision Pro"
+                },
+                "inventory": {
+                    "52": 2,
+                    "54": 5,
+                    "56": 0,
+                    "58": 1
+                }
             },
             {
-                "sizeLabel": "58",
-                "stack": 581,
-                "reach": 402,
-                "topTubeLength": 577,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.5
-            },
-            {
-                "sizeLabel": "61",
-                "stack": 602,
-                "reach": 408,
-                "topTubeLength": 595,
-                "seatTubeAngle": 73.0,
-                "headTubeAngle": 74.0
+                "id": "b1-v2",
+                "name": "SRAM Red AXS",
+                "color": "Gloss Red / White",
+                "price_eur": 14200,
+                "images": [
+                    "https://placehold.co/600x400/ff0000/ffffff?text=Tarmac+Red+Side",
+                    "https://placehold.co/600x400/ff0000/ffffff?text=Tarmac+Red+Detail"
+                ],
+                "specs": {
+                    "groupset": "SRAM Red eTap AXS",
+                    "wheelset": "Roval Rapide CLX II",
+                    "power_meter": "Quarq DZero"
+                },
+                "inventory": {
+                    "54": 1,
+                    "56": 3
+                }
             }
         ]
     },
     {
-        "id": "debug-bike-1",
-        "brand": "API TEST",
-        "modelName": "Connection Verified",
-        "price": 99999.0,
-        "imageUrl": "https://placehold.co/600x400/png?text=API+Working",
-        "geometries": [
+        "id": "b2",
+        "brand": "Canyon",
+        "model": "Aeroad CFR",
+        "year": 2024,
+        "category": "Aero",
+        "description": "Ingeniería alemana enfocada puramente en la velocidad.",
+        "geometry": [
             {
-                "sizeLabel": "M",
-                "stack": 550,
-                "reach": 390,
-                "topTubeLength": 550,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.0
+                "size": "S",
+                "stack_mm": 539,
+                "reach_mm": 390,
+                "top_tube_mm": 549,
+                "seat_tube_mm": 483
+            },
+            {
+                "size": "M",
+                "stack_mm": 560,
+                "reach_mm": 401,
+                "top_tube_mm": 560,
+                "seat_tube_mm": 523
+            },
+            {
+                "size": "L",
+                "stack_mm": 580,
+                "reach_mm": 415,
+                "top_tube_mm": 581,
+                "seat_tube_mm": 543
+            },
+            {
+                "size": "XL",
+                "stack_mm": 605,
+                "reach_mm": 422,
+                "top_tube_mm": 607,
+                "seat_tube_mm": 573
+            }
+        ],
+        "builds": [
+            {
+                "id": "b2-v1",
+                "name": "CFR Di2",
+                "color": "Stealth",
+                "price_eur": 9499,
+                "images": [
+                    "https://placehold.co/600x400/000000/333333?text=Aeroad+CFR+Stealth",
+                    "https://placehold.co/600x400/000000/333333?text=Cockpit+View"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "DT Swiss ARC 1100 Dicut 62",
+                    "power_meter": "Shimano FC-R9200-P"
+                },
+                "inventory": {
+                    "S": 4,
+                    "M": 10,
+                    "L": 2
+                }
+            },
+            {
+                "id": "b2-v2",
+                "name": "CFR MVDP Edition",
+                "color": "Alpecin Blue",
+                "price_eur": 9999,
+                "images": [
+                    "https://placehold.co/600x400/0000cc/ffffff?text=Aeroad+MVDP",
+                    "https://placehold.co/600x400/0000cc/ffffff?text=Aeroad+MVDP+Angle"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Shimano C60",
+                    "power_meter": "Shimano FC-R9200-P"
+                },
+                "inventory": {
+                    "M": 1,
+                    "L": 0
+                }
+            }
+        ]
+    },
+    {
+        "id": "b3",
+        "brand": "Trek",
+        "model": "Madone SLR 9 Gen 7",
+        "year": 2024,
+        "category": "Aero",
+        "description": "La bicicleta de carretera definitiva con tecnología IsoFlow.",
+        "geometry": [
+            {
+                "size": "52",
+                "stack_mm": 535,
+                "reach_mm": 383,
+                "top_tube_mm": 538,
+                "seat_tube_mm": 483
+            },
+            {
+                "size": "54",
+                "stack_mm": 541,
+                "reach_mm": 386,
+                "top_tube_mm": 543,
+                "seat_tube_mm": 496
+            },
+            {
+                "size": "56",
+                "stack_mm": 563,
+                "reach_mm": 391,
+                "top_tube_mm": 559,
+                "seat_tube_mm": 525
+            },
+            {
+                "size": "58",
+                "stack_mm": 581,
+                "reach_mm": 396,
+                "top_tube_mm": 574,
+                "seat_tube_mm": 553
+            }
+        ],
+        "builds": [
+            {
+                "id": "b3-v1",
+                "name": "Team Replica",
+                "color": "Lidl-Trek",
+                "price_eur": 12500,
+                "images": [
+                    "https://placehold.co/600x400/000088/ffcc00?text=Madone+Team",
+                    "https://placehold.co/600x400/000088/ffcc00?text=IsoFlow+Detail"
+                ],
+                "specs": {
+                    "groupset": "SRAM Red eTap AXS",
+                    "wheelset": "Bontrager Aeolus RSL 51",
+                    "power_meter": "SRAM Red AXS"
+                },
+                "inventory": {
+                    "54": 2,
+                    "56": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "b4",
+        "brand": "Pinarello",
+        "model": "Dogma F",
+        "year": 2025,
+        "category": "All-Rounder",
+        "description": "Siete de los últimos 11 Tour de Francia se han ganado en una Dogma.",
+        "geometry": [
+            {
+                "size": "515",
+                "stack_mm": 535,
+                "reach_mm": 380,
+                "top_tube_mm": 535,
+                "seat_tube_mm": 490
+            },
+            {
+                "size": "530",
+                "stack_mm": 542,
+                "reach_mm": 386,
+                "top_tube_mm": 545,
+                "seat_tube_mm": 505
+            },
+            {
+                "size": "540",
+                "stack_mm": 550,
+                "reach_mm": 389,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 515
+            },
+            {
+                "size": "550",
+                "stack_mm": 558,
+                "reach_mm": 393,
+                "top_tube_mm": 557,
+                "seat_tube_mm": 525
+            }
+        ],
+        "builds": [
+            {
+                "id": "b4-v1",
+                "name": "Super Record Wireless",
+                "color": "Nebula Green",
+                "price_eur": 14500,
+                "images": [
+                    "https://placehold.co/600x400/000000/00ff00?text=Dogma+F+Green",
+                    "https://placehold.co/600x400/000000/00ff00?text=Dogma+Fork"
+                ],
+                "specs": {
+                    "groupset": "Campagnolo Super Record Wireless",
+                    "wheelset": "Campagnolo Bora Ultra WTO",
+                    "power_meter": "N/A"
+                },
+                "inventory": {
+                    "530": 1,
+                    "550": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "b5",
+        "brand": "Cannondale",
+        "model": "SuperSix EVO LAB71",
+        "year": 2024,
+        "category": "Climbing",
+        "description": "La construcción de carbono más ligera que Cannondale ha hecho jamás.",
+        "geometry": [
+            {
+                "size": "51",
+                "stack_mm": 535,
+                "reach_mm": 380,
+                "top_tube_mm": 528,
+                "seat_tube_mm": 475
+            },
+            {
+                "size": "54",
+                "stack_mm": 555,
+                "reach_mm": 384,
+                "top_tube_mm": 546,
+                "seat_tube_mm": 510
+            },
+            {
+                "size": "56",
+                "stack_mm": 575,
+                "reach_mm": 392,
+                "top_tube_mm": 562,
+                "seat_tube_mm": 535
+            }
+        ],
+        "builds": [
+            {
+                "id": "b5-v1",
+                "name": "Dura-Ace Di2",
+                "color": "Burnt Pewter",
+                "price_eur": 13000,
+                "images": [
+                    "https://placehold.co/600x400/660000/cccccc?text=LAB71+Pewter"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "HollowGram R-SL 50",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "54": 3,
+                    "56": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "b6",
+        "brand": "Giant",
+        "model": "Propel Advanced SL 0",
+        "year": 2024,
+        "category": "Aero",
+        "description": "La bici aero definitiva para sprints y escapadas.",
+        "geometry": [
+            {
+                "size": "M",
+                "stack_mm": 545,
+                "reach_mm": 388,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 520
+            },
+            {
+                "size": "ML",
+                "stack_mm": 562,
+                "reach_mm": 393,
+                "top_tube_mm": 570,
+                "seat_tube_mm": 545
+            },
+            {
+                "size": "L",
+                "stack_mm": 581,
+                "reach_mm": 402,
+                "top_tube_mm": 580,
+                "seat_tube_mm": 575
+            }
+        ],
+        "builds": [
+            {
+                "id": "b6-v1",
+                "name": "SL 0",
+                "color": "Blue Dragonfly",
+                "price_eur": 11000,
+                "images": [
+                    "https://placehold.co/600x400/0000ff/000000?text=Propel+Blue"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Cadex 50 Ultra Disc",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "M": 5,
+                    "ML": 8
+                }
+            }
+        ]
+    },
+    {
+        "id": "b7",
+        "brand": "Cervélo",
+        "model": "S5",
+        "year": 2024,
+        "category": "Aero",
+        "description": "La bici que dominó el Tour con Vingegaard y Van Aert.",
+        "geometry": [
+            {
+                "size": "51",
+                "stack_mm": 519,
+                "reach_mm": 376,
+                "top_tube_mm": 531,
+                "seat_tube_mm": 464
+            },
+            {
+                "size": "54",
+                "stack_mm": 542,
+                "reach_mm": 384,
+                "top_tube_mm": 548,
+                "seat_tube_mm": 510
+            },
+            {
+                "size": "56",
+                "stack_mm": 565,
+                "reach_mm": 392,
+                "top_tube_mm": 565,
+                "seat_tube_mm": 540
+            }
+        ],
+        "builds": [
+            {
+                "id": "b7-v1",
+                "name": "Red eTap AXS",
+                "color": "Five Black",
+                "price_eur": 12000,
+                "images": [
+                    "https://placehold.co/600x400/111111/ffffff?text=Cervelo+S5+Black"
+                ],
+                "specs": {
+                    "groupset": "SRAM Red eTap AXS",
+                    "wheelset": "Reserve 52|63",
+                    "power_meter": "Quarq"
+                },
+                "inventory": {
+                    "54": 3,
+                    "56": 3
+                }
+            },
+            {
+                "id": "b7-v2",
+                "name": "Ultegra Di2",
+                "color": "Sapphire Ice",
+                "price_eur": 9000,
+                "images": [
+                    "https://placehold.co/600x400/ccccff/000000?text=Cervelo+S5+Ice"
+                ],
+                "specs": {
+                    "groupset": "Shimano Ultegra Di2",
+                    "wheelset": "Reserve 52|63",
+                    "power_meter": "4iiii"
+                },
+                "inventory": {
+                    "51": 2,
+                    "54": 6
+                }
+            }
+        ]
+    },
+    {
+        "id": "b8",
+        "brand": "Orbea",
+        "model": "Orca Aero",
+        "year": 2024,
+        "category": "Aero",
+        "description": "Equilibrio perfecto entre aerodinámica, rigidez y peso.",
+        "geometry": [
+            {
+                "size": "53",
+                "stack_mm": 539,
+                "reach_mm": 383,
+                "top_tube_mm": 548,
+                "seat_tube_mm": 490
+            },
+            {
+                "size": "55",
+                "stack_mm": 559,
+                "reach_mm": 391,
+                "top_tube_mm": 560,
+                "seat_tube_mm": 510
+            }
+        ],
+        "builds": [
+            {
+                "id": "b8-v1",
+                "name": "M10iLTD",
+                "color": "MyO Custom",
+                "price_eur": 10500,
+                "images": [
+                    "https://placehold.co/600x400/ffaa00/ffffff?text=Orca+Aero+Orange"
+                ],
+                "specs": {
+                    "groupset": "Shimano Dura-Ace Di2",
+                    "wheelset": "Oquo Road Performance RP57",
+                    "power_meter": "Shimano"
+                },
+                "inventory": {
+                    "53": 5,
+                    "55": 5
+                }
+            }
+        ]
+    },
+    {
+        "id": "b9",
+        "brand": "Scott",
+        "model": "Foil RC",
+        "year": 2024,
+        "category": "Aero",
+        "description": "Ganadora de etapas en Grandes Vueltas y Clásicas.",
+        "geometry": [
+            {
+                "size": "54",
+                "stack_mm": 548,
+                "reach_mm": 389,
+                "top_tube_mm": 550,
+                "seat_tube_mm": 480
+            },
+            {
+                "size": "56",
+                "stack_mm": 568,
+                "reach_mm": 394,
+                "top_tube_mm": 570,
+                "seat_tube_mm": 500
+            }
+        ],
+        "builds": [
+            {
+                "id": "b9-v1",
+                "name": "Ultimate",
+                "color": "HMX SL Black",
+                "price_eur": 13999,
+                "images": [
+                    "https://placehold.co/600x400/222222/999999?text=Foil+RC+Ultimate"
+                ],
+                "specs": {
+                    "groupset": "SRAM Red eTap AXS",
+                    "wheelset": "Zipp 454 NSW",
+                    "power_meter": "Quarq"
+                },
+                "inventory": {
+                    "54": 1,
+                    "56": 0
+                }
+            }
+        ]
+    },
+    {
+        "id": "b10",
+        "brand": "BMC",
+        "model": "Teammachine SLR01",
+        "year": 2024,
+        "category": "All-Rounder",
+        "description": "La primera bicicleta diseñada con inteligencia artificial (ACE Technology).",
+        "geometry": [
+            {
+                "size": "54",
+                "stack_mm": 550,
+                "reach_mm": 386,
+                "top_tube_mm": 549,
+                "seat_tube_mm": 505
+            },
+            {
+                "size": "56",
+                "stack_mm": 565,
+                "reach_mm": 392,
+                "top_tube_mm": 559,
+                "seat_tube_mm": 530
+            }
+        ],
+        "builds": [
+            {
+                "id": "b10-v1",
+                "name": "One",
+                "color": "Red/Black",
+                "price_eur": 12999,
+                "images": [
+                    "https://placehold.co/600x400/aa0000/000000?text=BMC+SLR01+Red"
+                ],
+                "specs": {
+                    "groupset": "Campagnolo Super Record EPS",
+                    "wheelset": "Campagnolo Bora Ultra WTO 45",
+                    "power_meter": "N/A"
+                },
+                "inventory": {
+                    "54": 2,
+                    "56": 2
+                }
             }
         ]
     }
