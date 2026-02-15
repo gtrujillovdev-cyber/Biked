@@ -49,6 +49,8 @@ class Bike:
 # Matches structure: BikeGeometryFinder/Biked/Biked/Data/Images/
 GITHUB_REPO_URL = "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/"
 
+import shutil
+
 def download_image(url, filename):
     """
     Downloads the image to the local Images/ folder and returns the GitHub Raw URL.
@@ -58,10 +60,11 @@ def download_image(url, filename):
         os.makedirs("Images")
         
     local_path = os.path.join("Images", filename)
+    placeholder_path = os.path.join("Images", "placeholder.png")
     
-    # If file exists and has size > 0, skip download (cache)
-    if os.path.exists(local_path) and os.path.getsize(local_path) > 0:
-        print(f"   [Cache] {filename} already exists.")
+    # If file exists and hash content (and isn't the placeholder itself, although hard to check easily, size > 2KB checks for empty file)
+    if os.path.exists(local_path) and os.path.getsize(local_path) > 1000:
+        print(f"   [Cache] {filename} exists ({os.path.getsize(local_path)} bytes).")
         return GITHUB_REPO_URL + filename
         
     try:
@@ -69,7 +72,7 @@ def download_image(url, filename):
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'
         }
         print(f"   [Downloading] {url} -> {filename}...")
-        r = requests.get(url, headers=headers, timeout=30) # Increased timeout for large files
+        r = requests.get(url, headers=headers, timeout=30)
         if r.status_code == 200:
             with open(local_path, "wb") as f:
                 f.write(r.content)
@@ -80,8 +83,13 @@ def download_image(url, filename):
     except Exception as e:
         print(f"   [Error] {e}")
     
-    # Fallback to original URL if download fails (better than nothing)
-    return url
+    # Fallback: Copy placeholder to this filename so the app has *something*
+    if os.path.exists(placeholder_path):
+        print(f"   [Fallback] Using placeholder for {filename}")
+        shutil.copy(placeholder_path, local_path)
+        return GITHUB_REPO_URL + filename
+    
+    return url # Total failure fallback to remote URL
 
 def scrape_bike_metadata(url, brand, model_fallback):
     # (Kept for future use, but not used in initial DB generation to verify images first)

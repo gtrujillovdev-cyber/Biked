@@ -199,7 +199,7 @@
         "brand": "Giant",
         "modelName": "Propel Advanced SL 0",
         "price": 12000.0,
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Giant_Bicycles_Logo.svg/640px-Giant_Bicycles_Logo.svg.png",
+        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/giant_logo.png",
         "geometries": [
             {
                 "sizeLabel": "XS",
@@ -256,7 +256,7 @@
         "brand": "Canyon",
         "modelName": "Aeroad CFR",
         "price": 8999.0,
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg/800px-Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg",
+        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/canyon_aeroad.jpg",
         "geometries": [
             {
                 "sizeLabel": "2XS",
@@ -321,7 +321,7 @@
         "brand": "Specialized",
         "modelName": "Tarmac SL8",
         "price": 12500.0,
-        "imageUrl": "https://media.specialized.com/bikes/road/5758_TarmacSL8_ArticleTile_580x618_02.jpg",
+        "imageUrl": "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/specialized_tarmac.jpg",
         "geometries": [
             {
                 "sizeLabel": "44",
