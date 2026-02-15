@@ -1,10 +1,262 @@
 [
     {
+        "id": "trek-madone-slr",
+        "brand": "Trek",
+        "modelName": "Madone SLR Gen 7",
+        "price": 12000.0,
+        "imageUrl": "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920/MadoneSLR9AXSGen7-23-41764-A-Portrait",
+        "geometries": [
+            {
+                "sizeLabel": "47",
+                "stack": 500,
+                "reach": 360,
+                "topTubeLength": 500,
+                "seatTubeAngle": 74.5,
+                "headTubeAngle": 70.0
+            },
+            {
+                "sizeLabel": "50",
+                "stack": 520,
+                "reach": 374,
+                "topTubeLength": 521,
+                "seatTubeAngle": 74.5,
+                "headTubeAngle": 71.0
+            },
+            {
+                "sizeLabel": "52",
+                "stack": 533,
+                "reach": 380,
+                "topTubeLength": 534,
+                "seatTubeAngle": 74.0,
+                "headTubeAngle": 72.0
+            },
+            {
+                "sizeLabel": "54",
+                "stack": 540,
+                "reach": 386,
+                "topTubeLength": 543,
+                "seatTubeAngle": 73.5,
+                "headTubeAngle": 73.0
+            },
+            {
+                "sizeLabel": "56",
+                "stack": 563,
+                "reach": 391,
+                "topTubeLength": 559,
+                "seatTubeAngle": 73.3,
+                "headTubeAngle": 73.5
+            },
+            {
+                "sizeLabel": "58",
+                "stack": 581,
+                "reach": 396,
+                "topTubeLength": 574,
+                "seatTubeAngle": 73.0,
+                "headTubeAngle": 73.8
+            },
+            {
+                "sizeLabel": "60",
+                "stack": 601,
+                "reach": 399,
+                "topTubeLength": 586,
+                "seatTubeAngle": 72.8,
+                "headTubeAngle": 73.9
+            },
+            {
+                "sizeLabel": "62",
+                "stack": 620,
+                "reach": 403,
+                "topTubeLength": 598,
+                "seatTubeAngle": 72.5,
+                "headTubeAngle": 74.0
+            }
+        ]
+    },
+    {
+        "id": "cannondale-supersix",
+        "brand": "Cannondale",
+        "modelName": "SuperSix EVO Hi-Mod",
+        "price": 11500.0,
+        "imageUrl": "https://embed.widencdn.net/img/dorelrl/nx5y4s3p6n/2000px/C23_C11202U_SuperSix_EVO_Hi_MOD_1_BLU_PD.png",
+        "geometries": [
+            {
+                "sizeLabel": "44",
+                "stack": 495,
+                "reach": 365,
+                "topTubeLength": 500,
+                "seatTubeAngle": 74.5,
+                "headTubeAngle": 70.5
+            },
+            {
+                "sizeLabel": "48",
+                "stack": 515,
+                "reach": 372,
+                "topTubeLength": 515,
+                "seatTubeAngle": 74.5,
+                "headTubeAngle": 71.5
+            },
+            {
+                "sizeLabel": "51",
+                "stack": 535,
+                "reach": 378,
+                "topTubeLength": 530,
+                "seatTubeAngle": 74.0,
+                "headTubeAngle": 72.0
+            },
+            {
+                "sizeLabel": "54",
+                "stack": 555,
+                "reach": 384,
+                "topTubeLength": 545,
+                "seatTubeAngle": 73.5,
+                "headTubeAngle": 73.0
+            },
+            {
+                "sizeLabel": "56",
+                "stack": 575,
+                "reach": 390,
+                "topTubeLength": 560,
+                "seatTubeAngle": 73.5,
+                "headTubeAngle": 73.3
+            },
+            {
+                "sizeLabel": "58",
+                "stack": 595,
+                "reach": 396,
+                "topTubeLength": 575,
+                "seatTubeAngle": 73.0,
+                "headTubeAngle": 73.5
+            }
+        ]
+    },
+    {
+        "id": "pinarello-dogma-f",
+        "brand": "Pinarello",
+        "modelName": "Dogma F",
+        "price": 14500.0,
+        "imageUrl": "https://pinarello.es/imgs/productos/ciclismo/carretera/dogma-f/dogma-f-disc-dura-ace-di2-2x12/DOGMA-F-DISC_BLACK-ON-BLACK_B301-1.jpg",
+        "geometries": [
+            {
+                "sizeLabel": "430",
+                "stack": 490,
+                "reach": 355,
+                "topTubeLength": 490,
+                "seatTubeAngle": 75.0,
+                "headTubeAngle": 70.0
+            },
+            {
+                "sizeLabel": "465",
+                "stack": 505,
+                "reach": 365,
+                "topTubeLength": 505,
+                "seatTubeAngle": 74.5,
+                "headTubeAngle": 71.0
+            },
+            {
+                "sizeLabel": "500",
+                "stack": 520,
+                "reach": 375,
+                "topTubeLength": 520,
+                "seatTubeAngle": 74.0,
+                "headTubeAngle": 72.0
+            },
+            {
+                "sizeLabel": "515",
+                "stack": 535,
+                "reach": 380,
+                "topTubeLength": 530,
+                "seatTubeAngle": 73.5,
+                "headTubeAngle": 72.5
+            },
+            {
+                "sizeLabel": "530",
+                "stack": 545,
+                "reach": 385,
+                "topTubeLength": 540,
+                "seatTubeAngle": 73.0,
+                "headTubeAngle": 73.0
+            },
+            {
+                "sizeLabel": "540",
+                "stack": 555,
+                "reach": 388,
+                "topTubeLength": 550,
+                "seatTubeAngle": 73.0,
+                "headTubeAngle": 73.2
+            },
+            {
+                "sizeLabel": "550",
+                "stack": 565,
+                "reach": 392,
+                "topTubeLength": 560,
+                "seatTubeAngle": 72.5,
+                "headTubeAngle": 73.5
+            }
+        ]
+    },
+    {
+        "id": "giant-propel-sl",
+        "brand": "Giant",
+        "modelName": "Propel Advanced SL 0",
+        "price": 12000.0,
+        "imageUrl": "https://images2.giant-bicycles.com/b_white,c_pad,h_800,q_80,w_1200/2202271836/MY23PropelAdvancedSL0_ColorAWeathervane_SilverPine.jpg",
+        "geometries": [
+            {
+                "sizeLabel": "XS",
+                "stack": 500,
+                "reach": 365,
+                "topTubeLength": 515,
+                "seatTubeAngle": 74.5,
+                "headTubeAngle": 71.0
+            },
+            {
+                "sizeLabel": "S",
+                "stack": 520,
+                "reach": 375,
+                "topTubeLength": 535,
+                "seatTubeAngle": 74.0,
+                "headTubeAngle": 72.5
+            },
+            {
+                "sizeLabel": "M",
+                "stack": 545,
+                "reach": 383,
+                "topTubeLength": 550,
+                "seatTubeAngle": 73.5,
+                "headTubeAngle": 73.0
+            },
+            {
+                "sizeLabel": "ML",
+                "stack": 565,
+                "reach": 393,
+                "topTubeLength": 565,
+                "seatTubeAngle": 73.0,
+                "headTubeAngle": 73.0
+            },
+            {
+                "sizeLabel": "L",
+                "stack": 585,
+                "reach": 403,
+                "topTubeLength": 580,
+                "seatTubeAngle": 73.0,
+                "headTubeAngle": 73.0
+            },
+            {
+                "sizeLabel": "XL",
+                "stack": 605,
+                "reach": 413,
+                "topTubeLength": 600,
+                "seatTubeAngle": 72.5,
+                "headTubeAngle": 73.0
+            }
+        ]
+    },
+    {
         "id": "canyon-aeroad-cfr",
         "brand": "Canyon",
         "modelName": "Aeroad CFR",
         "price": 8999.0,
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Canyon_Aeroad_CF_SLX_-_Stage_8_-_Tour_of_Britain_2016.jpg/640px-Canyon_Aeroad_CF_SLX_-_Stage_8_-_Tour_of_Britain_2016.jpg",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg/800px-Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg",
         "geometries": [
             {
                 "sizeLabel": "2XS",
@@ -65,76 +317,11 @@
         ]
     },
     {
-        "id": "orbea-orca-aero",
-        "brand": "Orbea",
-        "modelName": "Orca Aero",
-        "price": 5999.0,
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Road_bike_Orbea_Orca_Aero_2020.jpg/640px-Road_bike_Orbea_Orca_Aero_2020.jpg",
-        "geometries": [
-            {
-                "sizeLabel": "47",
-                "stack": 506,
-                "reach": 368,
-                "topTubeLength": 510,
-                "seatTubeAngle": 74.5,
-                "headTubeAngle": 71.0
-            },
-            {
-                "sizeLabel": "49",
-                "stack": 519,
-                "reach": 374,
-                "topTubeLength": 523,
-                "seatTubeAngle": 74.0,
-                "headTubeAngle": 71.5
-            },
-            {
-                "sizeLabel": "51",
-                "stack": 535,
-                "reach": 380,
-                "topTubeLength": 536,
-                "seatTubeAngle": 73.7,
-                "headTubeAngle": 72.2
-            },
-            {
-                "sizeLabel": "53",
-                "stack": 553,
-                "reach": 386,
-                "topTubeLength": 549,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 72.8
-            },
-            {
-                "sizeLabel": "55",
-                "stack": 572,
-                "reach": 393,
-                "topTubeLength": 563,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.0
-            },
-            {
-                "sizeLabel": "57",
-                "stack": 591,
-                "reach": 400,
-                "topTubeLength": 576,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.2
-            },
-            {
-                "sizeLabel": "60",
-                "stack": 615,
-                "reach": 408,
-                "topTubeLength": 590,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.5
-            }
-        ]
-    },
-    {
         "id": "specialized-tarmac-sl8",
         "brand": "Specialized",
         "modelName": "Tarmac SL8",
         "price": 12500.0,
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Specialized_Tarmac_SL7_Expert_-_Shimano_Ultegra_Di2_-_2021.jpg/640px-Specialized_Tarmac_SL7_Expert_-_Shimano_Ultegra_Di2_-_2021.jpg",
+        "imageUrl": "https://media.specialized.com/bikes/road/5758_TarmacSL8_ArticleTile_580x618_02.jpg",
         "geometries": [
             {
                 "sizeLabel": "44",
@@ -191,23 +378,6 @@
                 "topTubeLength": 595,
                 "seatTubeAngle": 73.0,
                 "headTubeAngle": 74.0
-            }
-        ]
-    },
-    {
-        "id": "debug-bike-1",
-        "brand": "API TEST",
-        "modelName": "Connection Verified",
-        "price": 99999.0,
-        "imageUrl": "https://placehold.co/600x400/png?text=API+Working",
-        "geometries": [
-            {
-                "sizeLabel": "M",
-                "stack": 550,
-                "reach": 390,
-                "topTubeLength": 550,
-                "seatTubeAngle": 73.5,
-                "headTubeAngle": 73.0
             }
         ]
     }

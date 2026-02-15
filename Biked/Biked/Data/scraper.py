@@ -1,5 +1,8 @@
 import json
 import os
+import requests
+from bs4 import BeautifulSoup
+import time
 
 # --- Models (Python equivalent of Swift models) ---
 
@@ -41,15 +44,124 @@ class Bike:
             "geometries": [geo.to_dict() for geo in self.geometries]
         }
 
-# --- Scraping / Data Generation Logic ---
+def scrape_bike_metadata(url, brand, model_fallback):
+    """
+    Attempts to scrape the bike's image and name from a webpage.
+    Uses generic OpenGraph tags (og:image, og:title) which work on most sites.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'
+        }
+        print(f"Scraping {url}...")
+        response = requests.get(url, headers=headers, timeout=10)
+        
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # 1. Try to find the image (og:image is the standard for social sharing)
+            image_url = None
+            og_image = soup.find("meta", property="og:image")
+            if og_image and og_image.get("content"):
+                image_url = og_image["content"]
+            
+            # 2. Try to verify the title
+            title = model_fallback
+            og_title = soup.find("meta", property="og:title")
+            if og_title and og_title.get("content"):
+                title = og_title["content"] # Often contains "Model Name | Brand"
+            
+            print(f"  -> Found Image: {image_url is not None}")
+            return image_url, title
+            
+    except Exception as e:
+        print(f"  -> Error scraping {url}: {e}")
+    
+    return None, model_fallback
 
 def get_initial_database():
-    """
-    Returns the initial dataset. 
-    In the future, you can add scraping functions here to fetch this data live.
-    """
     bikes = []
 
+    # --- 1. POPULAR ROAD BIKES (Manual Entry with verified Images) ---
+    
+    # TREK MADONE
+    trek_geo = [
+        Geometry("47", 500, 360, 500, 74.5, 70.0),
+        Geometry("50", 520, 374, 521, 74.5, 71.0),
+        Geometry("52", 533, 380, 534, 74.0, 72.0),
+        Geometry("54", 540, 386, 543, 73.5, 73.0),
+        Geometry("56", 563, 391, 559, 73.3, 73.5),
+        Geometry("58", 581, 396, 574, 73.0, 73.8),
+        Geometry("60", 601, 399, 586, 72.8, 73.9),
+        Geometry("62", 620, 403, 598, 72.5, 74.0)
+    ]
+    # NOTE: Using official Trek image URL (often stable) or a placeholder if scraping fails
+    bikes.append(Bike(
+        "trek-madone-slr", 
+        "Trek", 
+        "Madone SLR Gen 7", 
+        12000.0, 
+        "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920/MadoneSLR9AXSGen7-23-41764-A-Portrait",
+        trek_geo
+    ))
+
+    # CANNONDALE SUPERSIX EVO
+    c_geo = [
+         Geometry("44", 495, 365, 500, 74.5, 70.5),
+         Geometry("48", 515, 372, 515, 74.5, 71.5),
+         Geometry("51", 535, 378, 530, 74.0, 72.0),
+         Geometry("54", 555, 384, 545, 73.5, 73.0),
+         Geometry("56", 575, 390, 560, 73.5, 73.3),
+         Geometry("58", 595, 396, 575, 73.0, 73.5),
+    ]
+    bikes.append(Bike(
+        "cannondale-supersix",
+        "Cannondale",
+        "SuperSix EVO Hi-Mod",
+        11500.0,
+        "https://embed.widencdn.net/img/dorelrl/nx5y4s3p6n/2000px/C23_C11202U_SuperSix_EVO_Hi_MOD_1_BLU_PD.png",
+        c_geo
+    ))
+    
+    # PINARELLO DOGMA F
+    pin_geo = [
+        Geometry("430", 490, 355, 490, 75.0, 70.0),
+        Geometry("465", 505, 365, 505, 74.5, 71.0),
+        Geometry("500", 520, 375, 520, 74.0, 72.0),
+        Geometry("515", 535, 380, 530, 73.5, 72.5),
+        Geometry("530", 545, 385, 540, 73.0, 73.0),
+        Geometry("540", 555, 388, 550, 73.0, 73.2),
+        Geometry("550", 565, 392, 560, 72.5, 73.5),
+    ]
+    bikes.append(Bike(
+        "pinarello-dogma-f",
+        "Pinarello",
+        "Dogma F",
+        14500.0,
+        "https://pinarello.es/imgs/productos/ciclismo/carretera/dogma-f/dogma-f-disc-dura-ace-di2-2x12/DOGMA-F-DISC_BLACK-ON-BLACK_B301-1.jpg",
+        pin_geo
+    ))
+    
+    # GIANT PROPEL
+    giant_geo = [
+        Geometry("XS", 500, 365, 515, 74.5, 71.0),
+        Geometry("S", 520, 375, 535, 74.0, 72.5),
+        Geometry("M", 545, 383, 550, 73.5, 73.0),
+        Geometry("ML", 565, 393, 565, 73.0, 73.0),
+        Geometry("L", 585, 403, 580, 73.0, 73.0),
+        Geometry("XL", 605, 413, 600, 72.5, 73.0)
+    ]
+    bikes.append(Bike(
+        "giant-propel-sl",
+        "Giant",
+        "Propel Advanced SL 0",
+        12000.0,
+        "https://images2.giant-bicycles.com/b_white,c_pad,h_800,q_80,w_1200/2202271836/MY23PropelAdvancedSL0_ColorAWeathervane_SilverPine.jpg",
+        giant_geo
+    ))
+
+    # --- 2. EXISTING VERIFIED BIKES ---
+    
     # Canyon Aeroad CFR
     canyon_geo = [
         Geometry("2XS", 493, 365, 508, 73.5, 70.0),
@@ -65,29 +177,10 @@ def get_initial_database():
         "Canyon", 
         "Aeroad CFR", 
         8999.0, 
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Canyon_Aeroad_CF_SLX_-_Stage_8_-_Tour_of_Britain_2016.jpg/640px-Canyon_Aeroad_CF_SLX_-_Stage_8_-_Tour_of_Britain_2016.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg/800px-Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg", # Stable
         canyon_geo
     ))
-
-    # Orbea Orca Aero
-    orbea_geo = [
-        Geometry("47", 506, 368, 510, 74.5, 71.0),
-        Geometry("49", 519, 374, 523, 74.0, 71.5),
-        Geometry("51", 535, 380, 536, 73.7, 72.2),
-        Geometry("53", 553, 386, 549, 73.5, 72.8),
-        Geometry("55", 572, 393, 563, 73.5, 73.0),
-        Geometry("57", 591, 400, 576, 73.5, 73.2),
-        Geometry("60", 615, 408, 590, 73.5, 73.5)
-    ]
-    bikes.append(Bike(
-        "orbea-orca-aero", 
-        "Orbea", 
-        "Orca Aero", 
-        5999.0, 
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Road_bike_Orbea_Orca_Aero_2020.jpg/640px-Road_bike_Orbea_Orca_Aero_2020.jpg",
-        orbea_geo
-    ))
-
+    
     # Specialized Tarmac SL8
     spec_geo = [
         Geometry("44", 491, 365, 496, 75.5, 70.5),
@@ -103,21 +196,8 @@ def get_initial_database():
         "Specialized", 
         "Tarmac SL8", 
         12500.0, 
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Specialized_Tarmac_SL7_Expert_-_Shimano_Ultegra_Di2_-_2021.jpg/640px-Specialized_Tarmac_SL7_Expert_-_Shimano_Ultegra_Di2_-_2021.jpg", # Changed to Wikimedia for stability
+        "https://media.specialized.com/bikes/road/5758_TarmacSL8_ArticleTile_580x618_02.jpg", # Official
         spec_geo
-    ))
-
-    # DEBUG BIKE - To verify API Fetching
-    debug_geo = [
-        Geometry("M", 550, 390, 550, 73.5, 73.0)
-    ]
-    bikes.append(Bike(
-        "debug-bike-1",
-        "API TEST",
-        "Connection Verified",
-        99999.0,
-        "https://placehold.co/600x400/png?text=API+Working", # Guaranteed to work if internet exists
-        debug_geo
     ))
 
     return bikes
