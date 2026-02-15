@@ -67,8 +67,12 @@ class SearchViewModel {
                 return
             }
             let targets = estimateTargetGeometry(height: h, inseam: i)
-            stack = targets.stack
-            reach = targets.reach
+            guard let s = targets.stack, let r = targets.reach else {
+                errorMessage = "No se pudo estimar la geometría."
+                return
+            }
+            stack = s
+            reach = r
         }
         
         isSearching = true
