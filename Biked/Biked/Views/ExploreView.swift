@@ -7,23 +7,25 @@ struct ExploreView: View {
         NavigationStack {
             List {
                 ForEach(bikes) { bike in
-                    HStack(spacing: 12) {
-                        AsyncImage(url: bike.imageUrl) { image in
-                            image.resizable().aspectRatio(contentMode: .fit)
-                        } placeholder: {
-                            Color.gray.opacity(0.1)
+                    NavigationLink(destination: BikeDetailView(bike: bike)) {
+                        HStack(spacing: 12) {
+                            AsyncImage(url: bike.mainImage) { image in
+                                image.resizable().aspectRatio(contentMode: .fit)
+                            } placeholder: {
+                                Color.gray.opacity(0.1)
+                            }
+                            .frame(width: 80, height: 60)
+                            
+                            VStack(alignment: .leading) {
+                                Text(bike.model)
+                                    .font(.headline)
+                                Text(bike.brand)
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
                         }
-                        .frame(width: 80, height: 60)
-                        
-                        VStack(alignment: .leading) {
-                            Text(bike.modelName)
-                                .font(.headline)
-                            Text(bike.brand)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                        }
+                        .padding(.vertical, 4)
                     }
-                    .padding(.vertical, 4)
                 }
             }
             .navigationTitle("Explorar")

@@ -1,7 +1,8 @@
 import SwiftUI
+import Combine
 
 struct FavoritesView: View {
-    @StateObject private var viewModel = FavoritesViewModel()
+    @State private var viewModel = FavoritesViewModel()
     
     var body: some View {
         NavigationStack {

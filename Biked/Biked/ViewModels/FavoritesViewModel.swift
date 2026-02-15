@@ -46,7 +46,7 @@ class FavoritesViewModel {
         }
     }
     
-    private func loadFavorites() {
+    func loadFavorites() {
         if let data = UserDefaults.standard.data(forKey: saveKey),
            let decoded = try? JSONDecoder().decode(Set<String>.self, from: data) {
             favoriteBikeIDs = decoded

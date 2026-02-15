@@ -11,14 +11,49 @@ struct SearchView: View {
                     .bold()
                     .padding()
                 
+                // Mode Selection
+                Picker("Modo de Búsqueda", selection: $viewModel.searchMode) {
+                    Text("Por Medidas").tag(SearchViewModel.SearchMode.biometric)
+                    Text("Por Geometría").tag(SearchViewModel.SearchMode.geometric)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding(.horizontal)
+                
                 VStack(spacing: 20) {
-                    TextField("Stack (mm)", text: $viewModel.userStack)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.numberPad)
-                    
-                    TextField("Reach (mm)", text: $viewModel.userReach)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.numberPad)
+                    if viewModel.searchMode == .biometric {
+                        // Biometric Inputs
+                        TextField("Altura del Ciclista (cm)", text: $viewModel.userHeight)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.numberPad)
+                        
+                        TextField("Entrepierna (cm)", text: $viewModel.userInseam)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.numberPad)
+                        
+                        if let stack = viewModel.targetStack, let reach = viewModel.targetReach {
+                            VStack(spacing: 5) {
+                                Text("Geometría Estimada:")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                Text("Stack: \(Int(stack))mm | Reach: \(Int(reach))mm")
+                                    .font(.system(.subheadline, design: .monospaced))
+                                    .bold()
+                            }
+                            .padding(10)
+                            .background(Color.blue.opacity(0.1))
+                            .cornerRadius(8)
+                        }
+                        
+                    } else {
+                        // Geometric Inputs
+                        TextField("Stack (mm)", text: $viewModel.userStack)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.numberPad)
+                        
+                        TextField("Reach (mm)", text: $viewModel.userReach)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.numberPad)
+                    }
                     
                     Button(action: {
                         Task {
