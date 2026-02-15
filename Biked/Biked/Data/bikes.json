@@ -5,7 +5,7 @@
         "model": "S-Works Tarmac SL8",
         "year": 2025,
         "category": "All-Rounder",
-        "description": "La bicicleta de competici\u00f3n m\u00e1s r\u00e1pida del mundo.",
+        "description": "La bicicleta de competición más rápida del mundo.",
         "geometry": [
             {
                 "size": "49",
@@ -50,9 +50,9 @@
                 "color": "Satin Carbon/Viavi Cyn Cyan",
                 "price_eur": 14000,
                 "images": [
+                    "https://assets.specialized.com/i/specialized/94924-00_TARMAC-SL8-SW-DURA-ACE-DI2-SATIN-CARBON-VIAVI-CYN-CYAN-VIAVI-SILVER-MAGENTA-HLZ-GRN-WHT-IMP_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto",
                     "https://upload.wikimedia.org/wikipedia/commons/e/e3/Quickstep_specialized_2007.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/b/ba/Specialized_Rennrad.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/2/25/Specialized_bicycle.jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/b/ba/Specialized_Rennrad.jpg"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace R9270 Di2",
@@ -72,9 +72,8 @@
                 "color": "Gloss Red / White",
                 "price_eur": 14200,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e3/Quickstep_specialized_2007.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/b/ba/Specialized_Rennrad.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/2/25/Specialized_bicycle.jpg"
+                    "https://assets.specialized.com/i/specialized/94924-00_TARMAC-SL8-SW-DURA-ACE-DI2-SATIN-CARBON-VIAVI-CYN-CYAN-VIAVI-SILVER-MAGENTA-HLZ-GRN-WHT-IMP_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto",
+                    "https://upload.wikimedia.org/wikipedia/commons/e/e3/Quickstep_specialized_2007.jpg"
                 ],
                 "specs": {
                     "groupset": "SRAM Red eTap AXS",
@@ -94,7 +93,7 @@
         "model": "Aeroad CFR",
         "year": 2024,
         "category": "Aero",
-        "description": "Ingenier\u00eda alemana enfocada puramente en la velocidad.",
+        "description": "Ingeniería alemana enfocada puramente en la velocidad.",
         "geometry": [
             {
                 "size": "S",
@@ -132,6 +131,7 @@
                 "color": "Stealth",
                 "price_eur": 9499,
                 "images": [
+                    "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw0c0e0e98/images/full/full_2024_/2024_/full_2024_aeroad-cfr-di2_3967_R108_P03_01.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/0/02/TdF_2022_Castelnau-Magnoac_54_-_V%C3%A9los_Canyon.jpg"
                 ],
                 "specs": {
@@ -151,6 +151,7 @@
                 "color": "Alpecin Blue",
                 "price_eur": 9999,
                 "images": [
+                    "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw0c0e0e98/images/full/full_2024_/2024_/full_2024_aeroad-cfr-di2_3967_R108_P03_01.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/0/02/TdF_2022_Castelnau-Magnoac_54_-_V%C3%A9los_Canyon.jpg"
                 ],
                 "specs": {
@@ -171,7 +172,7 @@
         "model": "Madone SLR 9 Gen 7",
         "year": 2024,
         "category": "Aero",
-        "description": "La bicicleta de carretera definitiva con tecnolog\u00eda IsoFlow.",
+        "description": "La bicicleta de carretera definitiva con tecnología IsoFlow.",
         "geometry": [
             {
                 "size": "52",
@@ -209,9 +210,9 @@
                 "color": "Lidl-Trek",
                 "price_eur": 12500,
                 "images": [
+                    "https://media.trekbikes.com/image/upload/f_auto,fl_progressive,h_600,q_auto,w_1200/MadoneSLR9_24_42358_A_Portrait",
                     "https://upload.wikimedia.org/wikipedia/commons/2/22/2024_AGR_start_Lidl-Trek_bike_Longo_Borghini.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/2/25/2024_AGR_start_Lidl-Trek_bikes.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/7/74/Trek_Bicycle_Shop_in_Washington_D.C..jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/2/25/2024_AGR_start_Lidl-Trek_bikes.jpg"
                 ],
                 "specs": {
                     "groupset": "SRAM Red eTap AXS",
@@ -231,7 +232,7 @@
         "model": "Dogma F",
         "year": 2025,
         "category": "All-Rounder",
-        "description": "Siete de los \u00faltimos 11 Tour de Francia se han ganado en una Dogma.",
+        "description": "Siete de los últimos 11 Tour de Francia se han ganado en una Dogma.",
         "geometry": [
             {
                 "size": "515",
@@ -269,9 +270,9 @@
                 "color": "Nebula Green",
                 "price_eur": 14500,
                 "images": [
+                    "https://pinarello.com/global/en/images/bikes/dogma-f/dogma-f-luxter-red-gold-side.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/f/f2/Dogma_F10_Disk_and_the_F_is_for_FRESH%21%21_-dogmaf10_-pinarello_-roadbike_-baaw.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/3/37/Pinarello_Dogma_F_Super_Record_EPS.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/b/b0/Pinarello_Dogma_F_Super_Record_EPS_1.jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/3/37/Pinarello_Dogma_F_Super_Record_EPS.jpg"
                 ],
                 "specs": {
                     "groupset": "Campagnolo Super Record Wireless",
@@ -291,7 +292,7 @@
         "model": "SuperSix EVO LAB71",
         "year": 2024,
         "category": "Climbing",
-        "description": "La construcci\u00f3n de carbono m\u00e1s ligera que Cannondale ha hecho jam\u00e1s.",
+        "description": "La construcción de carbono más ligera que Cannondale ha hecho jamás.",
         "geometry": [
             {
                 "size": "51",
@@ -322,9 +323,9 @@
                 "color": "Burnt Pewter",
                 "price_eur": 13000,
                 "images": [
+                    "https://embed.widencdn.net/img/dorelrl/mz1x3e4w5f/1700px/C23_C11153U_SuperSix_EVO_LAB71_Pewter_Side.png",
                     "https://upload.wikimedia.org/wikipedia/commons/d/df/Cannondale-SM2000-.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/d/d3/Cannondale_CAAD10.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/b/b8/Cannondale_Head_Badge_1.png"
+                    "https://upload.wikimedia.org/wikipedia/commons/d/d3/Cannondale_CAAD10.jpg"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace Di2",
@@ -375,9 +376,8 @@
                 "color": "Blue Dragonfly",
                 "price_eur": 11000,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/2/28/Bicycle_crankset_Shimano_105_R7000_%28chainring_50-34%2C_length_172.5mm%2C_11_speed%29.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/d/d7/Giant_Bicycle_Rental_and_Service_in_Fangliao%2C_Pingtong_Taiwan.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/0/0a/Giant_Cadex_980c_bridge.jpg"
+                    "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80,w_850/my24/t-023_propel_advanced_sl_0_color_a_black_moonstone.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/2/28/Bicycle_crankset_Shimano_105_R7000_%28chainring_50-34%2C_length_172.5mm%2C_11_speed%29.jpg"
                 ],
                 "specs": {
                     "groupset": "Shimano Dura-Ace Di2",
@@ -393,11 +393,11 @@
     },
     {
         "id": "b7",
-        "brand": "Cerv\u00e9lo",
+        "brand": "Cervélo",
         "model": "S5",
         "year": 2024,
         "category": "Aero",
-        "description": "La bici que domin\u00f3 el Tour con Vingegaard y Van Aert.",
+        "description": "La bici que dominó el Tour con Vingegaard y Van Aert.",
         "geometry": [
             {
                 "size": "51",
@@ -428,9 +428,8 @@
                 "color": "Five Black",
                 "price_eur": 12000,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e4/Cerv%C3%A9lo_S5_%282019%29_-_05.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cerv%C3%A9lo_S5_%282019%29_-_10.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/b/b4/Cerv%C3%A9lo_S5_%282019%29_-_12.jpg"
+                    "https://images.ctfassets.net/p0qf7j048i0q/5S5x5x5x5x5x5x5x5/Cervelo_S5_2024_Hero.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/e/e4/Cerv%C3%A9lo_S5_%282019%29_-_05.jpg"
                 ],
                 "specs": {
                     "groupset": "SRAM Red eTap AXS",
@@ -448,9 +447,8 @@
                 "color": "Sapphire Ice",
                 "price_eur": 9000,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e4/Cerv%C3%A9lo_S5_%282019%29_-_05.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cerv%C3%A9lo_S5_%282019%29_-_10.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/b/b4/Cerv%C3%A9lo_S5_%282019%29_-_12.jpg"
+                    "https://images.ctfassets.net/p0qf7j048i0q/5S5x5x5x5x5x5x5x5/Cervelo_S5_2024_Hero.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cerv%C3%A9lo_S5_%282019%29_-_10.jpg"
                 ],
                 "specs": {
                     "groupset": "Shimano Ultegra Di2",
@@ -470,7 +468,7 @@
         "model": "Orca Aero",
         "year": 2024,
         "category": "Aero",
-        "description": "Equilibrio perfecto entre aerodin\u00e1mica, rigidez y peso.",
+        "description": "Equilibrio perfecto entre aerodinámica, rigidez y peso.",
         "geometry": [
             {
                 "size": "53",
@@ -494,6 +492,7 @@
                 "color": "MyO Custom",
                 "price_eur": 10500,
                 "images": [
+                    "https://www.orbea.com/img/products/product/large/L105TTCC-NO-SIDE-ORBEA-ORCA-AERO-M10iLTD.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/e/e1/Road_bike_Orbea_Orca_Aero_2020.jpg"
                 ],
                 "specs": {
@@ -514,7 +513,7 @@
         "model": "Foil RC",
         "year": 2024,
         "category": "Aero",
-        "description": "Ganadora de etapas en Grandes Vueltas y Cl\u00e1sicas.",
+        "description": "Ganadora de etapas en Grandes Vueltas y Clásicas.",
         "geometry": [
             {
                 "size": "54",
@@ -538,6 +537,7 @@
                 "color": "HMX SL Black",
                 "price_eur": 13999,
                 "images": [
+                    "https://www.scott-sports.com/_ui/responsive/common/images/products/2024/290333/290333_0098939_original.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Scott_Sports_logo.svg/2560px-Scott_Sports_logo.svg.png"
                 ],
                 "specs": {
@@ -558,7 +558,7 @@
         "model": "Teammachine SLR01",
         "year": 2024,
         "category": "All-Rounder",
-        "description": "La primera bicicleta dise\u00f1ada con inteligencia artificial (ACE Technology).",
+        "description": "La primera bicicleta diseñada con inteligencia artificial (ACE Technology).",
         "geometry": [
             {
                 "size": "54",
@@ -582,8 +582,8 @@
                 "color": "Red/Black",
                 "price_eur": 12999,
                 "images": [
-                    "https://upload.wikimedia.org/wikipedia/commons/6/69/BMC_-_SLR01_teammachine_%289357491022%29.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/1/10/TeammachineSLR01_ONE_2021.png"
+                    "https://bmc-switzerland.com/cdn/shop/files/Teammachine_SLR01_ONE_2024_Side.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/6/69/BMC_-_SLR01_teammachine_%289357491022%29.jpg"
                 ],
                 "specs": {
                     "groupset": "Campagnolo Super Record EPS",
