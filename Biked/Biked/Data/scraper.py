@@ -44,45 +44,53 @@ class Bike:
             "geometries": [geo.to_dict() for geo in self.geometries]
         }
 
-def scrape_bike_metadata(url, brand, model_fallback):
+# --- Helper for Downloading ---
+# Path to the raw image in the repo. 
+# Matches structure: BikeGeometryFinder/Biked/Biked/Data/Images/
+GITHUB_REPO_URL = "https://raw.githubusercontent.com/gtrujillovdev-cyber/Biked/main/Biked/Biked/Data/Images/"
+
+def download_image(url, filename):
     """
-    Attempts to scrape the bike's image and name from a webpage.
-    Uses generic OpenGraph tags (og:image, og:title) which work on most sites.
+    Downloads the image to the local Images/ folder and returns the GitHub Raw URL.
     """
+    # Ensure directory exists
+    if not os.path.exists("Images"):
+        os.makedirs("Images")
+        
+    local_path = os.path.join("Images", filename)
+    
+    # If file exists and has size > 0, skip download (cache)
+    if os.path.exists(local_path) and os.path.getsize(local_path) > 0:
+        print(f"   [Cache] {filename} already exists.")
+        return GITHUB_REPO_URL + filename
+        
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'
         }
-        print(f"Scraping {url}...")
-        response = requests.get(url, headers=headers, timeout=10)
-        
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.content, 'html.parser')
-            
-            # 1. Try to find the image (og:image is the standard for social sharing)
-            image_url = None
-            og_image = soup.find("meta", property="og:image")
-            if og_image and og_image.get("content"):
-                image_url = og_image["content"]
-            
-            # 2. Try to verify the title
-            title = model_fallback
-            og_title = soup.find("meta", property="og:title")
-            if og_title and og_title.get("content"):
-                title = og_title["content"] # Often contains "Model Name | Brand"
-            
-            print(f"  -> Found Image: {image_url is not None}")
-            return image_url, title
-            
+        print(f"   [Downloading] {url} -> {filename}...")
+        r = requests.get(url, headers=headers, timeout=30) # Increased timeout for large files
+        if r.status_code == 200:
+            with open(local_path, "wb") as f:
+                f.write(r.content)
+            print(f"   -> Success: {len(r.content)} bytes")
+            return GITHUB_REPO_URL + filename
+        else:
+            print(f"   [Error] Download failed: {r.status_code}")
     except Exception as e:
-        print(f"  -> Error scraping {url}: {e}")
+        print(f"   [Error] {e}")
     
-    return None, model_fallback
+    # Fallback to original URL if download fails (better than nothing)
+    return url
+
+def scrape_bike_metadata(url, brand, model_fallback):
+    # (Kept for future use, but not used in initial DB generation to verify images first)
+    pass
 
 def get_initial_database():
     bikes = []
 
-    # --- 1. POPULAR ROAD BIKES (Manual Entry with verified Images) ---
+    # --- 1. POPULAR ROAD BIKES (Local Images) ---
     
     # TREK MADONE
     trek_geo = [
@@ -100,7 +108,7 @@ def get_initial_database():
         "Trek", 
         "Madone SLR Gen 7", 
         12000.0, 
-        "https://upload.wikimedia.org/wikipedia/commons/f/f8/Trek_MADONE.jpg", # Verified Wikimedia
+        download_image("https://upload.wikimedia.org/wikipedia/commons/f/f8/Trek_MADONE.jpg", "trek_madone.jpg"),
         trek_geo
     ))
 
@@ -118,7 +126,7 @@ def get_initial_database():
         "Cannondale",
         "SuperSix EVO Hi-Mod",
         11500.0,
-        "https://upload.wikimedia.org/wikipedia/commons/2/27/Cannondale_SuperSix.jpg", # Verified Wikimedia
+        download_image("https://upload.wikimedia.org/wikipedia/commons/2/27/Cannondale_SuperSix.jpg", "cannondale_supersix.jpg"),
         c_geo
     ))
     
@@ -137,11 +145,11 @@ def get_initial_database():
         "Pinarello",
         "Dogma F",
         14500.0,
-        "https://upload.wikimedia.org/wikipedia/commons/3/37/Pinarello_Dogma_F_Super_Record_EPS.jpg", # Verified Wikimedia
+        download_image("https://upload.wikimedia.org/wikipedia/commons/3/37/Pinarello_Dogma_F_Super_Record_EPS.jpg", "pinarello_dogma.jpg"),
         pin_geo
     ))
     
-    # GIANT PROPEL (Using a generic placeholder for now as specific Wiki image wasn't found)
+    # GIANT PROPEL
     giant_geo = [
         Geometry("XS", 500, 365, 515, 74.5, 71.0),
         Geometry("S", 520, 375, 535, 74.0, 72.5),
@@ -155,7 +163,7 @@ def get_initial_database():
         "Giant",
         "Propel Advanced SL 0",
         12000.0,
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Giant_Bicycles_Logo.svg/640px-Giant_Bicycles_Logo.svg.png", # Fallback to logo
+        download_image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Giant_Bicycles_Logo.svg/640px-Giant_Bicycles_Logo.svg.png", "giant_logo.png"),
         giant_geo
     ))
 
@@ -176,7 +184,7 @@ def get_initial_database():
         "Canyon", 
         "Aeroad CFR", 
         8999.0, 
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg/800px-Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg", # Stable
+        download_image("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg/800px-Canyon_Aeroad_CF_SLX_Disc_9.0_SL.jpg", "canyon_aeroad.jpg"),
         canyon_geo
     ))
     
@@ -190,13 +198,23 @@ def get_initial_database():
         Geometry("58", 581, 402, 577, 73.5, 73.5),
         Geometry("61", 602, 408, 595, 73.0, 74.0)
     ]
+    # For Specialized, we try the official one, but might need a fallback.
+    # The placehold.co is robust. Use that as fallback inside download_image if needed, but here we supply the URL.
     bikes.append(Bike(
         "specialized-tarmac-sl8", 
         "Specialized", 
         "Tarmac SL8", 
         12500.0, 
-        "https://media.specialized.com/bikes/road/5758_TarmacSL8_ArticleTile_580x618_02.jpg", # Official
+        download_image("https://media.specialized.com/bikes/road/5758_TarmacSL8_ArticleTile_580x618_02.jpg", "specialized_tarmac.jpg"),
         spec_geo
+    ))
+    
+    # DEBUG BIKE
+    debug_geo = [Geometry("M", 550, 390, 550, 73.5, 73.0)]
+    bikes.append(Bike(
+        "debug-bike-1", "API TEST", "Connection Verified", 99999.0,
+        "https://placehold.co/600x400/png?text=API+Working",
+        debug_geo
     ))
 
     return bikes
@@ -207,13 +225,7 @@ def save_to_json(bikes, filename="bikes.json"):
         json.dump(data, f, indent=4, ensure_ascii=False)
     print(f"Database saved to {filename} with {len(bikes)} bikes.")
 
-# --- Main Execution ---
-
 if __name__ == "__main__":
-    print("Generating Bike Database...")
+    print("Generating Bike Database and Downloading Images...")
     bikes = get_initial_database()
-    
-    # Example: In the future, you would call scraping functions here
-    # e.g., bikes.extend(scrape_canyon_website())
-    
     save_to_json(bikes)
